@@ -1,0 +1,5 @@
+#ignore Directories
+FreeRTOS_TAD_logs/
+.metadata/
+.mcuxpressoide_packages_support/
+

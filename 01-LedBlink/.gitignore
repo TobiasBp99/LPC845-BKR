@@ -1,0 +1,14 @@
+#ignore Directories
+Debug/
+.settings/
+doc/latex
+
+
+#ignore files
+*.cproject
+*.project
+*.launch
+
+doc/html/*
+!doc/html/index.html
+

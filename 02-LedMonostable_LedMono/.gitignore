@@ -1,7 +1,8 @@
 #ignore Directories
 Debug/
 .settings/
-doc/latex
+doc/html
+
 
 
 #ignore files
@@ -9,6 +10,6 @@ doc/latex
 *.project
 *.launch
 
-doc/html/*
-!doc/html/index.html
+doc/latex/*
+!doc/latex/refman.pdf
 

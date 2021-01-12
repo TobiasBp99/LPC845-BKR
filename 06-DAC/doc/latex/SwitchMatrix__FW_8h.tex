@@ -1,0 +1,470 @@
+\hypertarget{SwitchMatrix__FW_8h}{}\doxysection{inc/\+Switch\+Matrix\+\_\+\+FW.h File Reference}
+\label{SwitchMatrix__FW_8h}\index{inc/SwitchMatrix\_FW.h@{inc/SwitchMatrix\_FW.h}}
+
+
+\+: Firmware functions for SWM  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_acd39c0c3ac298bbdd42d12bc442df699}\label{SwitchMatrix__FW_8h_acd39c0c3ac298bbdd42d12bc442df699}} 
+\#define {\bfseries PINASSIGN}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x4000\+C000\+UL)
+\item 
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a5f41871824de4c2eaf27f7ff1e36dd37}\label{SwitchMatrix__FW_8h_a5f41871824de4c2eaf27f7ff1e36dd37}} 
+\#define {\bfseries PINENABLE}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x4000\+C1\+C0\+UL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a4790f45dcc812c1b00184a2edccdddf5}\label{SwitchMatrix__FW_8h_a4790f45dcc812c1b00184a2edccdddf5}} 
+enum \{ {\bfseries BYTE0}
+, {\bfseries BYTE1}
+, {\bfseries BYTE2}
+, {\bfseries BYTE3}
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4a333ab8f537d36cc426b95fe20756bb4f}{UO\+\_\+\+TXD}}
+, {\bfseries UO\+\_\+\+SCLK}
+, {\bfseries U1\+\_\+\+CTS}
+, {\bfseries U2\+\_\+\+RTS}
+, \newline
+{\bfseries SPI0\+\_\+\+MOSI}
+, {\bfseries SPI0\+\_\+\+SSEL2}
+, {\bfseries SPI1\+\_\+\+MISO}
+, {\bfseries SCT\+\_\+\+IN1}
+, \newline
+{\bfseries SCT\+\_\+\+OUT1}
+, {\bfseries SCT\+\_\+\+OUT5}
+, {\bfseries I2\+C2\+\_\+\+SDA}
+, {\bfseries COMP0\+\_\+\+OUT}
+, \newline
+{\bfseries UART3\+\_\+\+RXD}
+, {\bfseries UART4\+\_\+\+SCLK}
+, {\bfseries T0\+\_\+\+MAT3}
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556ea9c8f736ab71b69e70de39ac172bfc564}{U0\+\_\+\+RXD}}
+, {\bfseries U1\+\_\+\+TXD}
+, {\bfseries U0\+\_\+\+SCLK}
+, {\bfseries U2\+\_\+\+CTS}
+, \newline
+{\bfseries SPI0\+\_\+\+MISO}
+, {\bfseries SPI0\+\_\+\+SSEL3}
+, {\bfseries SPI1\+\_\+\+SSEL0}
+, {\bfseries SCT\+\_\+\+IN2}
+, \newline
+{\bfseries SCT\+\_\+\+OUT2}
+, {\bfseries SCT\+\_\+\+OUT6}
+, {\bfseries I2\+C2\+\_\+\+SCL}
+, {\bfseries CLKOUT}
+, \newline
+{\bfseries UART3\+\_\+\+SCLK}
+, {\bfseries T0\+\_\+\+MAT0}
+, {\bfseries T0\+\_\+\+CAP0}
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53a4c2dc3a3ca8926082bbb67b49b8cfbf9}{UO\+\_\+\+RTS}}
+, {\bfseries U1\+\_\+\+RXD}
+, {\bfseries U2\+\_\+\+TXD}
+, {\bfseries U2\+\_\+\+SCLK}
+, \newline
+{\bfseries SPI0\+\_\+\+SSEL0}
+, {\bfseries SPI1\+\_\+\+SCK}
+, {\bfseries SPI1\+\_\+\+SSEL1}
+, {\bfseries SCT\+\_\+\+IN3}
+, \newline
+{\bfseries SCT\+\_\+\+OUT3}
+, {\bfseries I2\+C1\+\_\+\+SDA}
+, {\bfseries I2\+C3\+\_\+\+SDA}
+, {\bfseries GPIO\+\_\+\+INT\+\_\+\+BMAT}
+, \newline
+{\bfseries UART4\+\_\+\+TXD}
+, {\bfseries T0\+\_\+\+MAT1}
+, {\bfseries T0\+\_\+\+CAP1}
+ \}
+\item 
+enum \{ \newline
+\mbox{\hyperlink{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609a1480c5f2bb90e02609aa120c199c6a93}{UO\+\_\+\+CTS}}
+, {\bfseries U1\+\_\+\+RTS}
+, {\bfseries UO\+\_\+\+RXD}
+, {\bfseries SPIO\+\_\+\+SCK}
+, \newline
+{\bfseries SPI0\+\_\+\+SSEL1}
+, {\bfseries SPI1\+\_\+\+MOSI}
+, {\bfseries SCT0\+\_\+\+IN0}
+, {\bfseries SCT\+\_\+\+OUT0}
+, \newline
+{\bfseries SCT\+\_\+\+OUT4}
+, {\bfseries I2\+C1\+\_\+\+SCL}
+, {\bfseries I2\+C3\+\_\+\+SCL}
+, {\bfseries UART3\+\_\+\+TXD}
+, \newline
+{\bfseries UART4\+\_\+\+RXD}
+, {\bfseries T0\+\_\+\+MAT2}
+, {\bfseries T0\+\_\+\+CAP2}
+ \}
+\item 
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a1f9aebf1de3ebbf4283a4dcf73308562}\label{SwitchMatrix__FW_8h_a1f9aebf1de3ebbf4283a4dcf73308562}} 
+enum \{ \newline
+{\bfseries ADC\+\_\+0}
+, {\bfseries ADC\+\_\+1}
+, {\bfseries ADC\+\_\+2}
+, {\bfseries ADC\+\_\+3}
+, \newline
+{\bfseries ADC\+\_\+4}
+, {\bfseries ADC\+\_\+5}
+, {\bfseries ADC\+\_\+6}
+, {\bfseries ADC\+\_\+7}
+, \newline
+{\bfseries ADC\+\_\+8}
+, {\bfseries ADC\+\_\+9}
+, {\bfseries ADC\+\_\+10}
+, {\bfseries ADC\+\_\+11}
+, \newline
+{\bfseries DACOUT0}
+, {\bfseries DACOUT1}
+, {\bfseries CAPT\+\_\+\+X0}
+, {\bfseries CAPT\+\_\+\+X1}
+, \newline
+{\bfseries CAPT\+\_\+\+X2}
+, {\bfseries CAPT\+\_\+\+X3}
+ \}
+\item 
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a77867ab4129f63159b37bca3b652a798}\label{SwitchMatrix__FW_8h_a77867ab4129f63159b37bca3b652a798}} 
+enum \{ \newline
+{\bfseries CAPT\+\_\+\+X4}
+, {\bfseries CAPT\+\_\+\+X5}
+, {\bfseries CAPT\+\_\+\+X6}
+, {\bfseries CAPT\+\_\+\+X7}
+, \newline
+{\bfseries CAPT\+\_\+\+X8}
+, {\bfseries CAPT\+\_\+\+YL}
+, {\bfseries CAPT\+\_\+\+YH}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SwitchMatrix__FW_8h_a3b56ba754215878dc985ab67bbf28d80}{SWM}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t assign, uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em \+: Assign movable functions for pin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{SwitchMatrix__FW_8h_a8be3fd13cc1c7aeafcd5256bba0f5bca}{SWM\+\_\+\+Pin\+Enable}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t ena)
+\begin{DoxyCompactList}\small\item\em \+: Enable pin works as value passed in ena \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{SwitchMatrix__FW_8h_a60b8bdb0bf8d2e2f2902440faca7af5e}{SWM\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Enable SWM \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{SwitchMatrix__FW_8h_a4314d89cc19427583ddf10ffb76131cb}{SWM\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Disable SWM \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Firmware functions for SWM 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4}\label{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UO\_TXD@{UO\_TXD}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!UO\_TXD@{UO\_TXD}}}\mbox{\Hypertarget{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4a333ab8f537d36cc426b95fe20756bb4f}\label{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4a333ab8f537d36cc426b95fe20756bb4f}} 
+UO\+\_\+\+TXD&Possible assign. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 38 of file Switch\+Matrix\+\_\+\+FW.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38      \{          }
+\DoxyCodeLine{39     \mbox{\hyperlink{SwitchMatrix__FW_8h_a4caf8d8f829279fba122163d961608a4a333ab8f537d36cc426b95fe20756bb4f}{UO\_TXD}},}
+\DoxyCodeLine{40     UO\_SCLK,}
+\DoxyCodeLine{41     U1\_CTS,}
+\DoxyCodeLine{42     U2\_RTS,}
+\DoxyCodeLine{43     SPI0\_MOSI,}
+\DoxyCodeLine{44     SPI0\_SSEL2,}
+\DoxyCodeLine{45     SPI1\_MISO,}
+\DoxyCodeLine{46     SCT\_IN1,}
+\DoxyCodeLine{47     SCT\_OUT1,}
+\DoxyCodeLine{48     SCT\_OUT5,}
+\DoxyCodeLine{49     I2C2\_SDA,}
+\DoxyCodeLine{50     COMP0\_OUT,}
+\DoxyCodeLine{51     UART3\_RXD,}
+\DoxyCodeLine{52     UART4\_SCLK,}
+\DoxyCodeLine{53     T0\_MAT3}
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556e}\label{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556e}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U0\_RXD@{U0\_RXD}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!U0\_RXD@{U0\_RXD}}}\mbox{\Hypertarget{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556ea9c8f736ab71b69e70de39ac172bfc564}\label{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556ea9c8f736ab71b69e70de39ac172bfc564}} 
+U0\+\_\+\+RXD&Possible assign. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 56 of file Switch\+Matrix\+\_\+\+FW.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56      \{          }
+\DoxyCodeLine{57     \mbox{\hyperlink{SwitchMatrix__FW_8h_a96a58e29e8dbf2b5bdeb775cba46556ea9c8f736ab71b69e70de39ac172bfc564}{U0\_RXD}},}
+\DoxyCodeLine{58     U1\_TXD,}
+\DoxyCodeLine{59     U0\_SCLK,}
+\DoxyCodeLine{60     U2\_CTS,}
+\DoxyCodeLine{61     SPI0\_MISO,}
+\DoxyCodeLine{62     SPI0\_SSEL3,}
+\DoxyCodeLine{63     SPI1\_SSEL0,}
+\DoxyCodeLine{64     SCT\_IN2,}
+\DoxyCodeLine{65     SCT\_OUT2,}
+\DoxyCodeLine{66     SCT\_OUT6,}
+\DoxyCodeLine{67     I2C2\_SCL,}
+\DoxyCodeLine{68     CLKOUT,}
+\DoxyCodeLine{69     UART3\_SCLK,}
+\DoxyCodeLine{70     T0\_MAT0,}
+\DoxyCodeLine{71     T0\_CAP0}
+\DoxyCodeLine{72 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53}\label{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UO\_RTS@{UO\_RTS}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!UO\_RTS@{UO\_RTS}}}\mbox{\Hypertarget{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53a4c2dc3a3ca8926082bbb67b49b8cfbf9}\label{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53a4c2dc3a3ca8926082bbb67b49b8cfbf9}} 
+UO\+\_\+\+RTS&Possible assign. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 74 of file Switch\+Matrix\+\_\+\+FW.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74      \{          }
+\DoxyCodeLine{75     \mbox{\hyperlink{SwitchMatrix__FW_8h_ab48899087cc647f0f791ed0c459adc53a4c2dc3a3ca8926082bbb67b49b8cfbf9}{UO\_RTS}},}
+\DoxyCodeLine{76     U1\_RXD,}
+\DoxyCodeLine{77     U2\_TXD,}
+\DoxyCodeLine{78     U2\_SCLK,}
+\DoxyCodeLine{79     SPI0\_SSEL0,}
+\DoxyCodeLine{80     SPI1\_SCK,}
+\DoxyCodeLine{81     SPI1\_SSEL1,}
+\DoxyCodeLine{82     SCT\_IN3,}
+\DoxyCodeLine{83     SCT\_OUT3,}
+\DoxyCodeLine{84     I2C1\_SDA,}
+\DoxyCodeLine{85     I2C3\_SDA,}
+\DoxyCodeLine{86     GPIO\_INT\_BMAT,}
+\DoxyCodeLine{87     UART4\_TXD,}
+\DoxyCodeLine{88     T0\_MAT1,}
+\DoxyCodeLine{89     T0\_CAP1}
+\DoxyCodeLine{90 \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609}\label{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UO\_CTS@{UO\_CTS}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!UO\_CTS@{UO\_CTS}}}\mbox{\Hypertarget{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609a1480c5f2bb90e02609aa120c199c6a93}\label{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609a1480c5f2bb90e02609aa120c199c6a93}} 
+UO\+\_\+\+CTS&Possible assign. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 92 of file Switch\+Matrix\+\_\+\+FW.\+h.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{92      \{          }
+\DoxyCodeLine{93     \mbox{\hyperlink{SwitchMatrix__FW_8h_a458e651af6690959efa2afb96be7d609a1480c5f2bb90e02609aa120c199c6a93}{UO\_CTS}},}
+\DoxyCodeLine{94     U1\_RTS,}
+\DoxyCodeLine{95     UO\_RXD,}
+\DoxyCodeLine{96     SPIO\_SCK,}
+\DoxyCodeLine{97     SPI0\_SSEL1,}
+\DoxyCodeLine{98     SPI1\_MOSI,}
+\DoxyCodeLine{99     SCT0\_IN0,}
+\DoxyCodeLine{100     SCT\_OUT0,}
+\DoxyCodeLine{101     SCT\_OUT4,}
+\DoxyCodeLine{102     I2C1\_SCL,}
+\DoxyCodeLine{103     I2C3\_SCL,}
+\DoxyCodeLine{104     UART3\_TXD,}
+\DoxyCodeLine{105     UART4\_RXD,}
+\DoxyCodeLine{106     T0\_MAT2,}
+\DoxyCodeLine{107     T0\_CAP2}
+\DoxyCodeLine{108 \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a3b56ba754215878dc985ab67bbf28d80}\label{SwitchMatrix__FW_8h_a3b56ba754215878dc985ab67bbf28d80}} 
+\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!SWM@{SWM}}
+\index{SWM@{SWM}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SWM()}{SWM()}}
+{\footnotesize\ttfamily void SWM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{assign,  }\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+
+
+\+: Assign movable functions for pin 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t assign \+: \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t byte \+: BYTE0,BYTE1,BYTE2,BYTE3 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Switch\+Matrix\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                                                   \{}
+\DoxyCodeLine{23     pin = pin + 0x20 * port; \textcolor{comment}{//PIO0[0:31] 0x00 to 0x1F PIO1[0:21] 0x1F to 0x35}}
+\DoxyCodeLine{24     PINASSIGN[assign] |= (pin << byte);}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a4314d89cc19427583ddf10ffb76131cb}\label{SwitchMatrix__FW_8h_a4314d89cc19427583ddf10ffb76131cb}} 
+\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!SWM\_Disable@{SWM\_Disable}}
+\index{SWM\_Disable@{SWM\_Disable}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SWM\_Disable()}{SWM\_Disable()}}
+{\footnotesize\ttfamily void SWM\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Disable SWM 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Switch\+Matrix\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{67                        \{}
+\DoxyCodeLine{68     SYSAHBCLKCTRL0\&= (\string~(1<<7));}
+\DoxyCodeLine{69 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a60b8bdb0bf8d2e2f2902440faca7af5e}\label{SwitchMatrix__FW_8h_a60b8bdb0bf8d2e2f2902440faca7af5e}} 
+\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!SWM\_Enable@{SWM\_Enable}}
+\index{SWM\_Enable@{SWM\_Enable}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SWM\_Enable()}{SWM\_Enable()}}
+{\footnotesize\ttfamily void SWM\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Enable SWM 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Switch\+Matrix\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54                       \{}
+\DoxyCodeLine{55     SYSAHBCLKCTRL0|= (1<<7);}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SwitchMatrix__FW_8h_a8be3fd13cc1c7aeafcd5256bba0f5bca}\label{SwitchMatrix__FW_8h_a8be3fd13cc1c7aeafcd5256bba0f5bca}} 
+\index{SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}!SWM\_PinEnable@{SWM\_PinEnable}}
+\index{SWM\_PinEnable@{SWM\_PinEnable}!SwitchMatrix\_FW.h@{SwitchMatrix\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SWM\_PinEnable()}{SWM\_PinEnable()}}
+{\footnotesize\ttfamily void SWM\+\_\+\+Pin\+Enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{ena }\end{DoxyParamCaption})}
+
+
+
+\+: Enable pin works as value passed in ena 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t ena \+: READ Page 143 User\+Manual. There are multiple choices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Switch\+Matrix\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                                            \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if} (port == PORT1)      \textcolor{comment}{//PIENABLE[0] -\/> PIO0\_0 .... PIO1\_2}}
+\DoxyCodeLine{40         \textcolor{keywordflow}{if} (pin < 3)        \textcolor{comment}{//PIENABLE10] -\/> PIO1\_3 .... PIO1\_21}}
+\DoxyCodeLine{41             port = PORT0;}
+\DoxyCodeLine{42     PINENABLE[port] \&= (\string~(1 << ena));}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}

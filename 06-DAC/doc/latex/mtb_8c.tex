@@ -1,0 +1,30 @@
+\hypertarget{mtb_8c}{}\doxysection{source/mtb.c File Reference}
+\label{mtb_8c}\index{source/mtb.c@{source/mtb.c}}
+
+
+MTB initialization file.  
+
+
+{\ttfamily \#include $<$cr\+\_\+mtb\+\_\+buffer.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mtb_8c_a280fa7ef27831d752a5f4f6e86f422b7}\label{mtb_8c_a280fa7ef27831d752a5f4f6e86f422b7}} 
+\#define {\bfseries \+\_\+\+\_\+\+MTB\+\_\+\+BUFFER\+\_\+\+SIZE}~128
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mtb_8c_ae3852ed507241629720fff28c5acc2fa}\label{mtb_8c_ae3852ed507241629720fff28c5acc2fa}} 
+{\bfseries \+\_\+\+\_\+\+CR\+\_\+\+MTB\+\_\+\+BUFFER} (\+\_\+\+\_\+\+MTB\+\_\+\+BUFFER\+\_\+\+SIZE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+MTB initialization file. 
+
+Symbols controlling behavior of this code... \+\_\+\+\_\+\+MTB\+\_\+\+DISABLE If this symbol is defined, then the buffer array for the MTB will not be created.
+
+\+\_\+\+\_\+\+MTB\+\_\+\+BUFFER\+\_\+\+SIZE Symbol specifying the sizer of the buffer array for the MTB. This must be a power of 2 in size, and fit into the available RAM. The MTB buffer will also be aligned to its \textquotesingle{}size\textquotesingle{} boundary and be placed at the start of a RAM bank (which should ensure minimal or zero padding due to alignment).
+
+\+\_\+\+\_\+\+MTB\+\_\+\+RAM\+\_\+\+BANK Allows MTB Buffer to be placed into specific RAM bank. When this is not defined, the \char`\"{}default\char`\"{} (first if there are several) RAM bank is used. 

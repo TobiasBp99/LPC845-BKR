@@ -1,0 +1,117 @@
+\hypertarget{Aplication_8h}{}\doxysection{inc/\+Aplication.h File Reference}
+\label{Aplication_8h}\index{inc/Aplication.h@{inc/Aplication.h}}
+
+
+\+: Functions used in main  
+
+
+{\ttfamily \#include \char`\"{}LPC845.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GPIO\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GPIO\+\_\+\+SW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Switch\+Matrix\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SYSCON\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sys\+Tick\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Disp7\+Seg\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Disp7\+Seg\+\_\+\+SW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ADC\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}DAC\+\_\+\+FW.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}DAC\+\_\+\+SW.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Aplication_8h_adbdc46085152d434a03b0e7f48b96eb2}{LPC\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Initialize the board \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Aplication_8h_a90363099dc984eccffd2a7ad34def32d}{GPIO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Initialize the GPIO \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Functions used in main 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Aplication_8h_a90363099dc984eccffd2a7ad34def32d}\label{Aplication_8h_a90363099dc984eccffd2a7ad34def32d}} 
+\index{Aplication.h@{Aplication.h}!GPIO\_Init@{GPIO\_Init}}
+\index{GPIO\_Init@{GPIO\_Init}!Aplication.h@{Aplication.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_Init()}{GPIO\_Init()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Initialize the GPIO 
+
+\+: It depends on each proyect \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Aplication.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                      \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{GPIO__FW_8c_acef374b86db0620b9489425f7d8e510b}{GPIO\_SetDIR}}(\mbox{\hyperlink{GPIO__FW_8h_af9e0a49aab9082b58d739c0aa5ca69ba}{UserKEY}}, INPUT);}
+\DoxyCodeLine{37     \mbox{\hyperlink{GPIO__FW_8c_acef374b86db0620b9489425f7d8e510b}{GPIO\_SetDIR}}(\mbox{\hyperlink{GPIO__FW_8h_a6b8507a6f7a9e780342cc03c3a2d1762}{LedGREEN}}, OUTPUT);}
+\DoxyCodeLine{38     \mbox{\hyperlink{GPIO__FW_8c_acef374b86db0620b9489425f7d8e510b}{GPIO\_SetDIR}}(\mbox{\hyperlink{GPIO__FW_8h_a9c37384ae1bfe90d0c1b1f82930b0621}{LedBLUE}}, OUTPUT);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{GPIO__FW_8c_abbf05c229aeebf59f741253d2008df51}{GPIO\_SetPIN}}(\mbox{\hyperlink{GPIO__FW_8h_a6b8507a6f7a9e780342cc03c3a2d1762}{LedGREEN}}, \mbox{\hyperlink{GPIO__FW_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}});}
+\DoxyCodeLine{41     \mbox{\hyperlink{GPIO__FW_8c_abbf05c229aeebf59f741253d2008df51}{GPIO\_SetPIN}}(\mbox{\hyperlink{GPIO__FW_8h_a9c37384ae1bfe90d0c1b1f82930b0621}{LedBLUE}}, \mbox{\hyperlink{GPIO__FW_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}});}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Aplication_8h_adbdc46085152d434a03b0e7f48b96eb2}\label{Aplication_8h_adbdc46085152d434a03b0e7f48b96eb2}} 
+\index{Aplication.h@{Aplication.h}!LPC\_Init@{LPC\_Init}}
+\index{LPC\_Init@{LPC\_Init}!Aplication.h@{Aplication.h}}
+\doxysubsubsection{\texorpdfstring{LPC\_Init()}{LPC\_Init()}}
+{\footnotesize\ttfamily void LPC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Initialize the board 
+
+\+: It depends on each proyect \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file Aplication.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                     \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{GPIO__FW_8c_ada30aa9838ddfb00e545af5744153265}{GPIO\_Enable}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{SYSCON__FW_8c_abeffa2ff543e94fed46f21fde0c3823a}{BoardClockRUN}}();}
+\DoxyCodeLine{22     \mbox{\hyperlink{SysTick__FW_8c_a0c02a6f9eff35382780862889d17b4ce}{SysTick\_Init}}();}
+\DoxyCodeLine{23     \mbox{\hyperlink{Aplication_8c_a9e91bdfc4b23ef6d7b28faab06043f26}{GPIO\_Init}}();}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}

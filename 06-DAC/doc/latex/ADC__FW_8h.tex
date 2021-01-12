@@ -1,0 +1,417 @@
+\hypertarget{ADC__FW_8h}{}\doxysection{inc/\+ADC\+\_\+\+FW.h File Reference}
+\label{ADC__FW_8h}\index{inc/ADC\_FW.h@{inc/ADC\_FW.h}}
+
+
+\+: Firmware functions ADC  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structadc__ctrl__t}{adc\+\_\+ctrl\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structadc__seqX__ctrl}{adc\+\_\+seq\+X\+\_\+ctrl}}
+\item 
+struct \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}}
+\item 
+struct \mbox{\hyperlink{structadc__thr}{adc\+\_\+thr}}
+\item 
+struct \mbox{\hyperlink{structadc__chan}{adc\+\_\+chan}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a1747ec0f08c5471a5d6cdc48899697c3}\label{ADC__FW_8h_a1747ec0f08c5471a5d6cdc48899697c3}} 
+\#define {\bfseries MASK\+\_\+\+ADC\+\_\+\+SYSCON}~4
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_abe8a75498d14ac04dedecf9d02ed1a59}\label{ADC__FW_8h_abe8a75498d14ac04dedecf9d02ed1a59}} 
+\#define {\bfseries ADC\+\_\+\+SYSAHB}~24
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a5cbcaa568e20fcd4cc9325927d370860}\label{ADC__FW_8h_a5cbcaa568e20fcd4cc9325927d370860}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a5cbcaa568e20fcd4cc9325927d370860}{ADC\+\_\+0}}~PORT0,7,14
+\begin{DoxyCompactList}\small\item\em POT1 on board; 14 is the bit in PINENABLE. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a3155ee08271b4102e175d5ab3fcc4c80}\label{ADC__FW_8h_a3155ee08271b4102e175d5ab3fcc4c80}} 
+\#define {\bfseries ADC\+\_\+\+ADD}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x4001\+C000\+UL)
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac642d1dbb40d85f659f5da8c0c75b36c}\label{ADC__FW_8h_ac642d1dbb40d85f659f5da8c0c75b36c}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+CTRL}~ADC\+\_\+\+ADD\mbox{[}0\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a7ea9a801774d02d622ada61a144c8271}\label{ADC__FW_8h_a7ea9a801774d02d622ada61a144c8271}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+SEQA\+\_\+\+CTRL}~ADC\+\_\+\+ADD\mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a8c867f9fd061f60e45f9a825b3a4d49f}\label{ADC__FW_8h_a8c867f9fd061f60e45f9a825b3a4d49f}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+SEQB\+\_\+\+CTRL}~ADC\+\_\+\+ADD\mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a7228d0f0a4092ec773dddb3fdfd9c6c7}\label{ADC__FW_8h_a7228d0f0a4092ec773dddb3fdfd9c6c7}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+SEQA\+\_\+\+GDAT}~ADC\+\_\+\+ADD\mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ae3f2cf543fa50375a91d35d66394cc16}\label{ADC__FW_8h_ae3f2cf543fa50375a91d35d66394cc16}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+SEQB\+\_\+\+GDAT}~ADC\+\_\+\+ADD\mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a6b8abcb232ab0924aa89a673b93919ac}\label{ADC__FW_8h_a6b8abcb232ab0924aa89a673b93919ac}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT0}~ADC\+\_\+\+ADD\mbox{[}8\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ae9e8c2cbb536363ca924cdfa265a51cb}\label{ADC__FW_8h_ae9e8c2cbb536363ca924cdfa265a51cb}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT1}~ADC\+\_\+\+ADD\mbox{[}9\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a8b432f21ee5e7423f02f53edfc86d643}\label{ADC__FW_8h_a8b432f21ee5e7423f02f53edfc86d643}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT2}~ADC\+\_\+\+ADD\mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a03ea6a7af7625efe3b1931e32e8273ae}\label{ADC__FW_8h_a03ea6a7af7625efe3b1931e32e8273ae}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT3}~ADC\+\_\+\+ADD\mbox{[}11\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a032eb6aa6e39421d387fae1dc165172f}\label{ADC__FW_8h_a032eb6aa6e39421d387fae1dc165172f}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT4}~ADC\+\_\+\+ADD\mbox{[}12\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac845e5b51d0c2d245d6e7e87fe0f3f23}\label{ADC__FW_8h_ac845e5b51d0c2d245d6e7e87fe0f3f23}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT5}~ADC\+\_\+\+ADD\mbox{[}13\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a5c92c22fe74f77860573c5084569d7a4}\label{ADC__FW_8h_a5c92c22fe74f77860573c5084569d7a4}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT6}~ADC\+\_\+\+ADD\mbox{[}14\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_afff6248a5176c59cf26cacbc54aa6da5}\label{ADC__FW_8h_afff6248a5176c59cf26cacbc54aa6da5}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT7}~ADC\+\_\+\+ADD\mbox{[}15\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ade65f87ef290c65e8a22124d0718ba91}\label{ADC__FW_8h_ade65f87ef290c65e8a22124d0718ba91}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT8}~ADC\+\_\+\+ADD\mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac21c78daae2a76f61092d6beca53d9fc}\label{ADC__FW_8h_ac21c78daae2a76f61092d6beca53d9fc}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT9}~ADC\+\_\+\+ADD\mbox{[}17\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a90ed7da24b9b1dc56adb209b1e88224c}\label{ADC__FW_8h_a90ed7da24b9b1dc56adb209b1e88224c}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT10}~ADC\+\_\+\+ADD\mbox{[}18\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a25f789ff37adde48158b34b8a7474e1f}\label{ADC__FW_8h_a25f789ff37adde48158b34b8a7474e1f}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+DAT11}~ADC\+\_\+\+ADD\mbox{[}19\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_adf1d9bde28d4643b780f05b49d4df734}\label{ADC__FW_8h_adf1d9bde28d4643b780f05b49d4df734}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+THR0\+\_\+\+LOW}~ADC\+\_\+\+ADD\mbox{[}20\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_aaf463ef83d7790e467da5aa814e21136}\label{ADC__FW_8h_aaf463ef83d7790e467da5aa814e21136}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+THR1\+\_\+\+LOW}~ADC\+\_\+\+ADD\mbox{[}21\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_acc1f5d1855c2f1e0f80bd4b356bf1329}\label{ADC__FW_8h_acc1f5d1855c2f1e0f80bd4b356bf1329}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+THR0\+\_\+\+HIGH\+\_\+}~ADC\+\_\+\+ADD\mbox{[}22\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a0964727c7985cb2ebdd775bd3ea73d2b}\label{ADC__FW_8h_a0964727c7985cb2ebdd775bd3ea73d2b}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+THR1\+\_\+\+HIGH\+\_\+}~ADC\+\_\+\+ADD\mbox{[}23\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a74693fefdf9c9aa51b5f0a9ddd7af7b0}\label{ADC__FW_8h_a74693fefdf9c9aa51b5f0a9ddd7af7b0}} 
+\#define {\bfseries \+\_\+\+ADC\+\_\+\+CHAN\+\_\+\+THRSEL}~ADC\+\_\+\+ADD\mbox{[}24\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_abf9502b90d1f555e2e0cdbe41a220e1d}\label{ADC__FW_8h_abf9502b90d1f555e2e0cdbe41a220e1d}} 
+\#define {\bfseries ADC\+\_\+\+INTEN}~ADC\+\_\+\+ADD\mbox{[}25\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_ab37a3b929bf20f057c839ab22ec8435c}\label{ADC__FW_8h_ab37a3b929bf20f057c839ab22ec8435c}} 
+\#define {\bfseries ADC\+\_\+\+FLAGS}~ADC\+\_\+\+ADD\mbox{[}26\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a01f15b80ca14a05f0f215e03b4f6b2d4}\label{ADC__FW_8h_a01f15b80ca14a05f0f215e03b4f6b2d4}} 
+\#define {\bfseries ADC\+\_\+\+TRM}~ADC\+\_\+\+ADD\mbox{[}27\mbox{]}
+\item 
+\mbox{\Hypertarget{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}\label{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}{ADC\+\_\+\+CTRL}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__ctrl__t}{adc\+\_\+ctrl\+\_\+t}} $\ast$) 0x4001\+C000\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}\label{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\+\_\+\+SEQA\+\_\+\+CTRL}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__ctrl}{adc\+\_\+seq\+X\+\_\+ctrl}} $\ast$) 0x4001\+C008\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_af23595fb1ba8e46eb49ec9d6e3f91824}\label{ADC__FW_8h_af23595fb1ba8e46eb49ec9d6e3f91824}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_af23595fb1ba8e46eb49ec9d6e3f91824}{ADC\+\_\+\+SEQB\+\_\+\+CTRL}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__ctrl}{adc\+\_\+seq\+X\+\_\+ctrl}} $\ast$) 0x4001\+C00\+CUL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a4b7c68d9e83147063354832ef517ce31}\label{ADC__FW_8h_a4b7c68d9e83147063354832ef517ce31}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a4b7c68d9e83147063354832ef517ce31}{ADC\+\_\+\+SEQA\+\_\+\+GDAT}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C010\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a13d4bcd5f62559bb68ff99aeb0bf8ed8}\label{ADC__FW_8h_a13d4bcd5f62559bb68ff99aeb0bf8ed8}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a13d4bcd5f62559bb68ff99aeb0bf8ed8}{ADC\+\_\+\+SEQB\+\_\+\+GDAT}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C014\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a606b2a362f4338e716abc795783be575}\label{ADC__FW_8h_a606b2a362f4338e716abc795783be575}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a606b2a362f4338e716abc795783be575}{ADC\+\_\+\+DAT0}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C020\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac099e5aa0fbfc60e7d60cf258209a50f}\label{ADC__FW_8h_ac099e5aa0fbfc60e7d60cf258209a50f}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ac099e5aa0fbfc60e7d60cf258209a50f}{ADC\+\_\+\+DAT1}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C024\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a5407481d2fd6097d621789b59bf6f01d}\label{ADC__FW_8h_a5407481d2fd6097d621789b59bf6f01d}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a5407481d2fd6097d621789b59bf6f01d}{ADC\+\_\+\+DAT2}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C028\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ade249547a2effdb1b9f9a9382e90318b}\label{ADC__FW_8h_ade249547a2effdb1b9f9a9382e90318b}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ade249547a2effdb1b9f9a9382e90318b}{ADC\+\_\+\+DAT3}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C02\+CUL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a5a7b0a5936e8a5c0fa8b79b8e1198cbc}\label{ADC__FW_8h_a5a7b0a5936e8a5c0fa8b79b8e1198cbc}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a5a7b0a5936e8a5c0fa8b79b8e1198cbc}{ADC\+\_\+\+DAT4}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C030\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a1ef8a60e8a1b92fd993cc9f7763609ab}\label{ADC__FW_8h_a1ef8a60e8a1b92fd993cc9f7763609ab}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a1ef8a60e8a1b92fd993cc9f7763609ab}{ADC\+\_\+\+DAT5}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C034\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_aebc9fa0b34de8e5f88e2f19aece40687}\label{ADC__FW_8h_aebc9fa0b34de8e5f88e2f19aece40687}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_aebc9fa0b34de8e5f88e2f19aece40687}{ADC\+\_\+\+DAT6}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C038\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a07d005ac218e32bfa30ca0b9bcfd5a38}\label{ADC__FW_8h_a07d005ac218e32bfa30ca0b9bcfd5a38}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a07d005ac218e32bfa30ca0b9bcfd5a38}{ADC\+\_\+\+DAT7}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C03\+CUL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_aedffff629d5a8a0b9511647fedb9fee2}\label{ADC__FW_8h_aedffff629d5a8a0b9511647fedb9fee2}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_aedffff629d5a8a0b9511647fedb9fee2}{ADC\+\_\+\+DAT8}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C040\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a5884eb2d7b6b78ce781db244de91c60a}\label{ADC__FW_8h_a5884eb2d7b6b78ce781db244de91c60a}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a5884eb2d7b6b78ce781db244de91c60a}{ADC\+\_\+\+DAT9}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C044\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_adafac2e157de1c2c085b79bab441ea12}\label{ADC__FW_8h_adafac2e157de1c2c085b79bab441ea12}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_adafac2e157de1c2c085b79bab441ea12}{ADC\+\_\+\+DAT10}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C048\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_abac5c56ac5f79fabaf7be5a4ebb27675}\label{ADC__FW_8h_abac5c56ac5f79fabaf7be5a4ebb27675}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_abac5c56ac5f79fabaf7be5a4ebb27675}{ADC\+\_\+\+DAT11}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__seqX__gdat}{adc\+\_\+seq\+X\+\_\+gdat}} $\ast$) 0x4001\+C04\+CUL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a4699b993655ecd630b5aef4fea1940dc}\label{ADC__FW_8h_a4699b993655ecd630b5aef4fea1940dc}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a4699b993655ecd630b5aef4fea1940dc}{ADC\+\_\+\+THR0\+\_\+\+LOW}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__thr}{adc\+\_\+thr}} $\ast$) 0x4001\+C050\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_a77b267bbdf6b931f6abacfee422b89b0}\label{ADC__FW_8h_a77b267bbdf6b931f6abacfee422b89b0}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_a77b267bbdf6b931f6abacfee422b89b0}{ADC\+\_\+\+THR1\+\_\+\+LOW}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__thr}{adc\+\_\+thr}} $\ast$) 0x4001\+C054\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ae5e9869843c3b1e12ba602be8dcefc22}\label{ADC__FW_8h_ae5e9869843c3b1e12ba602be8dcefc22}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ae5e9869843c3b1e12ba602be8dcefc22}{ADC\+\_\+\+THR0\+\_\+\+HIGH}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__thr}{adc\+\_\+thr}} $\ast$) 0x4001\+C058\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ab5233f0163bc6f76475d1684768ccdf8}\label{ADC__FW_8h_ab5233f0163bc6f76475d1684768ccdf8}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ab5233f0163bc6f76475d1684768ccdf8}{ADC\+\_\+\+THR1\+\_\+\+HIGH}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__thr}{adc\+\_\+thr}} $\ast$) 0x4001\+C05\+CUL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac2ffa135d083f52c5f5d6389e9b472d0}\label{ADC__FW_8h_ac2ffa135d083f52c5f5d6389e9b472d0}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ac2ffa135d083f52c5f5d6389e9b472d0}{ADC\+\_\+\+CHAN\+\_\+\+THRSEL}}~( ( \+\_\+\+\_\+\+RW \mbox{\hyperlink{structadc__chan}{adc\+\_\+chan}} $\ast$) 0x4001\+C060\+UL)
+\begin{DoxyCompactList}\small\item\em Pointer to a struct in that memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ad342cf648949d7fc3765f2a5fbc3e0f3}\label{ADC__FW_8h_ad342cf648949d7fc3765f2a5fbc3e0f3}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ad342cf648949d7fc3765f2a5fbc3e0f3}{MASK\+\_\+\+SEQA\+\_\+\+INTEN}}~1$<$$<$0
+\begin{DoxyCompactList}\small\item\em Interrupt after each conv. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_ac8f6f6337cfc3a9b957c6e0cdba1e8e8}\label{ADC__FW_8h_ac8f6f6337cfc3a9b957c6e0cdba1e8e8}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_ac8f6f6337cfc3a9b957c6e0cdba1e8e8}{MASK\+\_\+\+SEQB\+\_\+\+INTEN}}~1$<$$<$1
+\begin{DoxyCompactList}\small\item\em Interrupt after each conv. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_aa8b1a103a46a96d151e3b64841df135d}\label{ADC__FW_8h_aa8b1a103a46a96d151e3b64841df135d}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_aa8b1a103a46a96d151e3b64841df135d}{MASK\+\_\+\+ISE\+\_\+\+ADC\+\_\+\+SEQA}}~1$<$$<$16
+\begin{DoxyCompactList}\small\item\em Enable Interrupt NVIC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{ADC__FW_8h_abd2eefd094d8b7f539185a42debe834e}\label{ADC__FW_8h_abd2eefd094d8b7f539185a42debe834e}} 
+\#define \mbox{\hyperlink{ADC__FW_8h_abd2eefd094d8b7f539185a42debe834e}{MASK\+\_\+\+ISE\+\_\+\+ADC\+\_\+\+SEQB}}~1$<$$<$17
+\begin{DoxyCompactList}\small\item\em Enable Interrupt NVIC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ADC__FW_8h_a38059ee820315c26293cefb89c77102b}{ADC\+\_\+\+Init}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t ena)
+\begin{DoxyCompactList}\small\item\em \+: Initialize ADC on a pin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ADC__FW_8h_a4b937bee82ae2e542b5d2f04eb6f869a}{ADC\+\_\+\+Power}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Power ADC \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ADC__FW_8h_a4267de5bc303060b4dfd2997c078c602}{ADC\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Enable clock in ADC \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ADC__FW_8h_aa256af5b8a253bdc3f6aacaa29830e64}{ADC\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Disable clock in ADC \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Firmware functions ADC 
+
+\+: 12 bits convertion \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 08/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ADC__FW_8h_aa256af5b8a253bdc3f6aacaa29830e64}\label{ADC__FW_8h_aa256af5b8a253bdc3f6aacaa29830e64}} 
+\index{ADC\_FW.h@{ADC\_FW.h}!ADC\_Disable@{ADC\_Disable}}
+\index{ADC\_Disable@{ADC\_Disable}!ADC\_FW.h@{ADC\_FW.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_Disable()}{ADC\_Disable()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Disable clock in ADC 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 08/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file ADC\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90                        \{}
+\DoxyCodeLine{91     SYSAHBCLKCTRL0\&= (\string~(1<<ADC\_SYSAHB));}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ADC__FW_8h_a4267de5bc303060b4dfd2997c078c602}\label{ADC__FW_8h_a4267de5bc303060b4dfd2997c078c602}} 
+\index{ADC\_FW.h@{ADC\_FW.h}!ADC\_Enable@{ADC\_Enable}}
+\index{ADC\_Enable@{ADC\_Enable}!ADC\_FW.h@{ADC\_FW.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_Enable()}{ADC\_Enable()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Enable clock in ADC 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 08/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file ADC\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                       \{}
+\DoxyCodeLine{78     SYSAHBCLKCTRL0|= (1<<ADC\_SYSAHB);}
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ADC__FW_8h_a38059ee820315c26293cefb89c77102b}\label{ADC__FW_8h_a38059ee820315c26293cefb89c77102b}} 
+\index{ADC\_FW.h@{ADC\_FW.h}!ADC\_Init@{ADC\_Init}}
+\index{ADC\_Init@{ADC\_Init}!ADC\_FW.h@{ADC\_FW.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_Init()}{ADC\_Init()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{ena }\end{DoxyParamCaption})}
+
+
+
+\+: Initialize ADC on a pin 
+
+\+: Continuos conversion of POTE in board \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 08/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t en\+: bit to enable in PINENABLE (page 143 UM) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+$<$ Enable CLOCK in SYSAHB
+
+$<$ Enable service interrupt
+
+$<$ Interrupt after conversion finish
+
+$<$ Enable Switch Matrix
+
+$<$ Enable pin in SWN as Analog\+Input
+
+$<$ Disable Switch Matrix
+
+$<$ Power in SYSCON
+
+$<$ Div = 0
+
+$<$ Sync
+
+$<$ OFF
+
+$<$ OFF
+
+$<$ Sample CH0
+
+$<$ No hardware trigger
+
+$<$ Positive trigger
+
+$<$ Enable sync
+
+$<$ Individual end of conversion
+
+$<$ Start,enable set on the same line first time
+
+Definition at line 23 of file ADC\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                       \{}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{ADC__FW_8c_adedcf869c1c849cb9a55a16d470b8766}{ADC\_Enable}}();                     }
+\DoxyCodeLine{26     ISER0|= \mbox{\hyperlink{ADC__FW_8h_aa8b1a103a46a96d151e3b64841df135d}{MASK\_ISE\_ADC\_SEQA}};         }
+\DoxyCodeLine{27     ADC\_INTEN|= \mbox{\hyperlink{ADC__FW_8h_ad342cf648949d7fc3765f2a5fbc3e0f3}{MASK\_SEQA\_INTEN}};     }
+\DoxyCodeLine{28     \mbox{\hyperlink{SwitchMatrix__FW_8c_a6bc0a5dfe96b74b30084854478b28afa}{SWM\_Enable}}();                     }
+\DoxyCodeLine{29     \mbox{\hyperlink{SwitchMatrix__FW_8c_afb93272629fa17351ac351250714d27b}{SWM\_PinEnable}}(port, pin, ena);     }
+\DoxyCodeLine{30     \mbox{\hyperlink{SwitchMatrix__FW_8c_a6ac2d7958a17b54a0a2d0d24bfa631d5}{SWM\_Disable}}();                       }
+\DoxyCodeLine{31     \mbox{\hyperlink{ADC__FW_8c_a0561a0fb200b6abf6276987d74bd87aa}{ADC\_Power}}();                       }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \mbox{\hyperlink{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}{ADC\_CTRL}}-\/>\_CLKDIV = 0x00;       }
+\DoxyCodeLine{36     \mbox{\hyperlink{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}{ADC\_CTRL}}-\/>\_ASYNCMODE = 0;       }
+\DoxyCodeLine{37     \mbox{\hyperlink{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}{ADC\_CTRL}}-\/>\_LPWRMODE = 0;        }
+\DoxyCodeLine{38     \mbox{\hyperlink{ADC__FW_8h_a32af09f72946127b7d8f5f0d11de8d67}{ADC\_CTRL}}-\/>\_CALMODE = 0;         }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_CHANNELS       = 0x01;     }
+\DoxyCodeLine{41     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_TRIGGER        = 0x00;     }
+\DoxyCodeLine{42     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_TRIGPOL        = 0x1;      }
+\DoxyCodeLine{43     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_SYNCBYPASS         = 0x0;      }
+\DoxyCodeLine{44     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_TSAMP          = 0x00;}
+\DoxyCodeLine{45     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_START          = 0;}
+\DoxyCodeLine{46     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_BURST          = 0;}
+\DoxyCodeLine{47     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_SINGLESTEP         = 0x0;}
+\DoxyCodeLine{48     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_LOWPRIO        = 0x0;}
+\DoxyCodeLine{49     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_MODE           = 0;        }
+\DoxyCodeLine{50     \mbox{\hyperlink{ADC__FW_8h_a3d2640db60bdaea88afdc79f18784200}{ADC\_SEQA\_CTRL}}-\/>\_SEQx\_ENA       = 0;}
+\DoxyCodeLine{51     \_ADC\_SEQA\_CTRL |= ((0b100001) << 26);       }
+\DoxyCodeLine{52 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ADC__FW_8h_a4b937bee82ae2e542b5d2f04eb6f869a}\label{ADC__FW_8h_a4b937bee82ae2e542b5d2f04eb6f869a}} 
+\index{ADC\_FW.h@{ADC\_FW.h}!ADC\_Power@{ADC\_Power}}
+\index{ADC\_Power@{ADC\_Power}!ADC\_FW.h@{ADC\_FW.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_Power()}{ADC\_Power()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Power (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Power ADC 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 08/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file ADC\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                      \{}
+\DoxyCodeLine{64     PDRUNCFG\&= (\string~(1 << MASK\_ADC\_SYSCON));}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}

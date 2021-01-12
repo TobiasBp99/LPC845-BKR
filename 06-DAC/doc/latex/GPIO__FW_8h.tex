@@ -1,0 +1,1045 @@
+\hypertarget{GPIO__FW_8h}{}\doxysection{inc/\+GPIO\+\_\+\+FW.h File Reference}
+\label{GPIO__FW_8h}\index{inc/GPIO\_FW.h@{inc/GPIO\_FW.h}}
+
+
+\+: Firmware functions for GPIO  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_af41b34488a518db05b413d3a370f871f}\label{GPIO__FW_8h_af41b34488a518db05b413d3a370f871f}} 
+\#define {\bfseries PORT0}~0
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a83b698b796fa8d1625536439f28ea575}\label{GPIO__FW_8h_a83b698b796fa8d1625536439f28ea575}} 
+\#define {\bfseries PORT1}~1
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a6b8507a6f7a9e780342cc03c3a2d1762}\label{GPIO__FW_8h_a6b8507a6f7a9e780342cc03c3a2d1762}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_a6b8507a6f7a9e780342cc03c3a2d1762}{Led\+GREEN}}~PORT1 , 0
+\begin{DoxyCompactList}\small\item\em Led green in board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a9c37384ae1bfe90d0c1b1f82930b0621}\label{GPIO__FW_8h_a9c37384ae1bfe90d0c1b1f82930b0621}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_a9c37384ae1bfe90d0c1b1f82930b0621}{Led\+BLUE}}~PORT1 , 1
+\begin{DoxyCompactList}\small\item\em Led blue in board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a09d1e24304e471b825a3e740a4f8c0ff}\label{GPIO__FW_8h_a09d1e24304e471b825a3e740a4f8c0ff}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_a09d1e24304e471b825a3e740a4f8c0ff}{Led\+RED}}~PORT1 , 2
+\begin{DoxyCompactList}\small\item\em Led red in board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_af9e0a49aab9082b58d739c0aa5ca69ba}\label{GPIO__FW_8h_af9e0a49aab9082b58d739c0aa5ca69ba}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_af9e0a49aab9082b58d739c0aa5ca69ba}{User\+KEY}}~PORT0 , 4
+\begin{DoxyCompactList}\small\item\em Key in board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a1bb283bd7893b9855e2f23013891fc82}\label{GPIO__FW_8h_a1bb283bd7893b9855e2f23013891fc82}} 
+\#define {\bfseries INPUT}~0
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a61a3c9a18380aafb6e430e79bf596557}\label{GPIO__FW_8h_a61a3c9a18380aafb6e430e79bf596557}} 
+\#define {\bfseries OUTPUT}~1
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ab811d8c6ff3a505312d3276590444289}\label{GPIO__FW_8h_ab811d8c6ff3a505312d3276590444289}} 
+\#define {\bfseries LOW}~0
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}\label{GPIO__FW_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}} 
+\#define {\bfseries HIGH}~1
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_abba8499ed90f0dbc95c8189027fd0294}\label{GPIO__FW_8h_abba8499ed90f0dbc95c8189027fd0294}} 
+\#define {\bfseries ACT\+\_\+\+HIGH}~1
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a7a06b845ed42f87ad3a71ccb0e7e4a33}\label{GPIO__FW_8h_a7a06b845ed42f87ad3a71ccb0e7e4a33}} 
+\#define {\bfseries ACT\+\_\+\+LOW}~0
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_af2e697ac60e05813d45ea2c9c9e79c25}\label{GPIO__FW_8h_af2e697ac60e05813d45ea2c9c9e79c25}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_af2e697ac60e05813d45ea2c9c9e79c25}{LED\+\_\+\+ON}}~0
+\begin{DoxyCompactList}\small\item\em The led are active low. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a80700bb63bd56ebabbb4728aa433fd29}\label{GPIO__FW_8h_a80700bb63bd56ebabbb4728aa433fd29}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\+\_\+\+OFF}}~1
+\begin{DoxyCompactList}\small\item\em The led are active low. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_adbadc4286ab334302bdd54f1ef500e2e}\label{GPIO__FW_8h_adbadc4286ab334302bdd54f1ef500e2e}} 
+\#define \mbox{\hyperlink{GPIO__FW_8h_adbadc4286ab334302bdd54f1ef500e2e}{BOUNCE}}~10
+\begin{DoxyCompactList}\small\item\em Times to check the bounce. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a37ab487e53598fb75589ad91e664a875}\label{GPIO__FW_8h_a37ab487e53598fb75589ad91e664a875}} 
+\#define {\bfseries SYSAHBCLKCTRL}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x40048080\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a777561309098be96e13addb4071b4a1c}\label{GPIO__FW_8h_a777561309098be96e13addb4071b4a1c}} 
+\#define {\bfseries SYSAHBCLKCTRL0}~SYSAHBCLKCTRL\mbox{[}0\mbox{]}
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a93c6f0e67ffea14860c0f96d832bc110}\label{GPIO__FW_8h_a93c6f0e67ffea14860c0f96d832bc110}} 
+\#define {\bfseries SYSAHBCLKCTRL1}~SYSAHBCLKCTRL\mbox{[}1\mbox{]}
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a586b20852796c9d2a98cc706d60f6faa}\label{GPIO__FW_8h_a586b20852796c9d2a98cc706d60f6faa}} 
+\#define {\bfseries GPIO\+\_\+\+PBYTE}~( ( \+\_\+\+\_\+\+RW uint8\+\_\+t $\ast$)  0x\+A0000000\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a7b6f3dc7d2db03d5d10214b62f940cdf}\label{GPIO__FW_8h_a7b6f3dc7d2db03d5d10214b62f940cdf}} 
+\#define {\bfseries GPIO\+\_\+\+PWORD}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0001000\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ad2d4d43025e8e2a4444ee572d7ea503a}\label{GPIO__FW_8h_ad2d4d43025e8e2a4444ee572d7ea503a}} 
+\#define {\bfseries GPIO\+\_\+\+DIRP}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0002000\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ac5d7411fcdf1f2bb51fb57db9fe7c85c}\label{GPIO__FW_8h_ac5d7411fcdf1f2bb51fb57db9fe7c85c}} 
+\#define {\bfseries GPIO\+\_\+\+PORT}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0002100\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a7eb837e2bacbd245c622ac06ef902fab}\label{GPIO__FW_8h_a7eb837e2bacbd245c622ac06ef902fab}} 
+\#define {\bfseries GPIO\+\_\+\+SETP}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0002200\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a43bdb81f6d71558a8c04b61568d78b41}\label{GPIO__FW_8h_a43bdb81f6d71558a8c04b61568d78b41}} 
+\#define {\bfseries GPIO\+\_\+\+CLRP}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0002280\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a693ff1d6be25cb9597d81dad4ec2bab8}\label{GPIO__FW_8h_a693ff1d6be25cb9597d81dad4ec2bab8}} 
+\#define {\bfseries GPIO\+\_\+\+NOTP}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+A0002300\+UL)
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ab172533997c40d51668b348ea02e2d70}\label{GPIO__FW_8h_ab172533997c40d51668b348ea02e2d70}} 
+\#define {\bfseries NO\+\_\+\+PULL\+\_\+\+UP\+\_\+\+DOWN}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ab47362632d6cd744f764880731de5704}\label{GPIO__FW_8h_ab47362632d6cd744f764880731de5704}} 
+\#define {\bfseries PULL\+\_\+\+DOWN}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aca4f67c0077925f24ea1f6b26e313271}\label{GPIO__FW_8h_aca4f67c0077925f24ea1f6b26e313271}} 
+\#define {\bfseries PULL\+\_\+\+UP}~0x02
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aeb9956e1bcb59a7886b12b0e50294a69}\label{GPIO__FW_8h_aeb9956e1bcb59a7886b12b0e50294a69}} 
+\#define {\bfseries REPEATER}~0x03
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a4cd3122149abbcc59e0c1cef1d029d2c}\label{GPIO__FW_8h_a4cd3122149abbcc59e0c1cef1d029d2c}} 
+\#define {\bfseries HYS\+\_\+\+EN}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aae129f05b65361050376d5bbd19f3363}\label{GPIO__FW_8h_aae129f05b65361050376d5bbd19f3363}} 
+\#define {\bfseries HYS\+\_\+\+DIS}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a1bd6288798be42fdea989c06888645d9}\label{GPIO__FW_8h_a1bd6288798be42fdea989c06888645d9}} 
+\#define {\bfseries INV\+\_\+\+INPUT}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_acb98920bbf97aa9481ec0f58b3de21e9}\label{GPIO__FW_8h_acb98920bbf97aa9481ec0f58b3de21e9}} 
+\#define {\bfseries NOT\+\_\+\+INV\+\_\+\+INPUT}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ac4f65ff5dde683b2c85a63c921aaf5b0}\label{GPIO__FW_8h_ac4f65ff5dde683b2c85a63c921aaf5b0}} 
+\#define {\bfseries OD\+\_\+\+EN}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a1ae090b7e899c74c9ed384b3f88a497e}\label{GPIO__FW_8h_a1ae090b7e899c74c9ed384b3f88a497e}} 
+\#define {\bfseries OD\+\_\+\+DIS}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ad8ca0962f60ec94a22013d0292243fca}\label{GPIO__FW_8h_ad8ca0962f60ec94a22013d0292243fca}} 
+\#define {\bfseries BYPASS\+\_\+\+FILTER}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aad1579c648a72dde26b67cd2fc39bf9d}\label{GPIO__FW_8h_aad1579c648a72dde26b67cd2fc39bf9d}} 
+\#define {\bfseries CLK1\+\_\+\+FILTER}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a0a18cc15706df73ca780f071a505b398}\label{GPIO__FW_8h_a0a18cc15706df73ca780f071a505b398}} 
+\#define {\bfseries CLK2\+\_\+\+FILTER}~0x02
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aa7bfe79fa4a0e552c5e91623ca340a75}\label{GPIO__FW_8h_aa7bfe79fa4a0e552c5e91623ca340a75}} 
+\#define {\bfseries CLK3\+\_\+\+FILTER}~0x03
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_acb417e8bcf299afa41d57b048f709fb0}\label{GPIO__FW_8h_acb417e8bcf299afa41d57b048f709fb0}} 
+\#define {\bfseries IOCONCLKDIV0}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a5a514507f828778898b3d3b318cd25a0}\label{GPIO__FW_8h_a5a514507f828778898b3d3b318cd25a0}} 
+\#define {\bfseries IOCONCLKDIV1}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aac06fe35be892aa2347e27e461c11767}\label{GPIO__FW_8h_aac06fe35be892aa2347e27e461c11767}} 
+\#define {\bfseries IOCONCLKDIV2}~0x02
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_aba1954521cd500e1be6ec2f9f2e97a7f}\label{GPIO__FW_8h_aba1954521cd500e1be6ec2f9f2e97a7f}} 
+\#define {\bfseries IOCONCLKDIV3}~0x03
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a833c4a33769b2533395844cdc734adce}\label{GPIO__FW_8h_a833c4a33769b2533395844cdc734adce}} 
+\#define {\bfseries IOCONCLKDIV4}~0x04
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a7b779c83b5c1739b145253515a030776}\label{GPIO__FW_8h_a7b779c83b5c1739b145253515a030776}} 
+\#define {\bfseries IOCONCLKDIV5}~0x05
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a09945dc9fa2f8c27cdf3fe3e256c0bdc}\label{GPIO__FW_8h_a09945dc9fa2f8c27cdf3fe3e256c0bdc}} 
+\#define {\bfseries IOCONCLKDIV6}~0x06
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a5e17599c64e09cbe7d5c83ae97769951}\label{GPIO__FW_8h_a5e17599c64e09cbe7d5c83ae97769951}} 
+\#define {\bfseries DAC\+\_\+\+EN}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a6c1dd7bfdf5a79717800ac2132cc067d}\label{GPIO__FW_8h_a6c1dd7bfdf5a79717800ac2132cc067d}} 
+\#define {\bfseries DAC\+\_\+\+DIS}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a97860928741ddf833c77c6aade0fceb1}\label{GPIO__FW_8h_a97860928741ddf833c77c6aade0fceb1}} 
+\#define {\bfseries STD\+\_\+\+MODE}~0x00
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ac40cd077742d43dc0ea4b6ee972d37b0}\label{GPIO__FW_8h_ac40cd077742d43dc0ea4b6ee972d37b0}} 
+\#define {\bfseries STD\+\_\+\+GPIO}~0x01
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_ac707c9605a0b9ca67aa757ad23377feb}\label{GPIO__FW_8h_ac707c9605a0b9ca67aa757ad23377feb}} 
+\#define {\bfseries FAST\+\_\+\+MODE}~0x02
+\item 
+\mbox{\Hypertarget{GPIO__FW_8h_a990478403266c0298c35d214ddc858a7}\label{GPIO__FW_8h_a990478403266c0298c35d214ddc858a7}} 
+\#define {\bfseries IOCON\+\_\+}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x40044000\+UL)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a57b8ff0901dfd7dd67ee8404cd34e5a6}{GPIO\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Enable GPIO0 and GPIO1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a2701299a9e1bd1b4ec6b289c3c8d0c0f}{GPIO\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Disable GPIO0 and GPIO1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a92fe0d25813af69105702ebf4c59df29}{GPIO\+\_\+\+Set\+DIR}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t dir)
+\begin{DoxyCompactList}\small\item\em \+: Choose GPIO as Input/\+Output \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a3fbbb6ce9033d146683c313ca145b3f3}{GPIO\+\_\+\+Set\+PIN}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em \+: Choose GPIO\textquotesingle{}s output state \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{GPIO__FW_8h_ab528a8f45e2f225c4be3dd8e59a29816}{GPIO\+\_\+\+Get\+PIN}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em \+: Return GPIO\textquotesingle{}s input state \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_ae12da89d8fb72eb570173e88dcf44289}{GPIO\+\_\+\+Set\+OUT}} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em \+: Put GPIO\textquotesingle{}s out to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_ac97926dda461b416857036286500b391}{GPIO\+\_\+\+Clear\+OUT}} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em \+: Put GPIO\textquotesingle{}s out to 0 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_ade8d47cfeac9b1484e0d2e601f2b82c8}{GPIO\+\_\+\+Toogle\+OUT}} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em \+: Invert GPIO\textquotesingle{}s out \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a2cabd7370b71570acf4287822e2362fa}{GPIO\+\_\+\+Debounce\+User\+KEY}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Firmware debounce for user key in board \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_ae00a7289f4ad9e94515e0b44df5dc9fd}{GPIO\+\_\+\+Debounce}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t state)
+\begin{DoxyCompactList}\small\item\em \+: Firmware debounce for a GPIO \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a976cfc82607589bc84880c2a45f4eab4}{IOCONEnable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Enable IOCON \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a22d5bf787f7803f0a49b2458d9ec6a69}{IOCONDisable}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Disable IOCON \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{GPIO__FW_8h_af8567ee20c7b224b3bf0828fc47182dd}{Get\+OFFSET}} (uint8\+\_\+t port, uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em \+: Usefull for Set\+Mode functions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a35bbae55852e2ebd176f51dee1a5cfb1}{GPIO\+\_\+\+Set\+Mode\+INPUT}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: on-\/chip pull-\/up/pull-\/down resistor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a34bb2f4c73a61b7e975e6188bb319fff}{GPIO\+\_\+\+Set\+Mode\+HYS}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Hysteresis \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_aea7f80da4bfc5bb2c380f7dd0759ab68}{GPIO\+\_\+\+Set\+Mode\+INV}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Invert input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_aa9d5f5c58a6f3e0b195a9546d3fa3479}{GPIO\+\_\+\+Set\+Mode\+OD}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Open drain \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a3a8ce4635d8bac8e38a691aa6d3c65b4}{GPIO\+\_\+\+Set\+Mode\+FILTER}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Digital filter sample mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a18b8e19a1f81ece1bd9f832828e6be58}{GPIO\+\_\+\+Set\+Mode\+CLKDIV}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Select peripheral clock divider for input filter sampling clock \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a88d6553ce86bf6f2dbfc422219f7df5b}{GPIO\+\_\+\+Set\+Mode\+DAC}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Selects DAC mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{GPIO__FW_8h_a91d160d2ff7912acd1b2eaa4f023236c}{GPIO\+\_\+\+Set\+Mode\+I2C}} (uint8\+\_\+t port, uint8\+\_\+t pin, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em \+: Selects I2C mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Firmware functions for GPIO 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GPIO__FW_8h_af8567ee20c7b224b3bf0828fc47182dd}\label{GPIO__FW_8h_af8567ee20c7b224b3bf0828fc47182dd}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GetOFFSET@{GetOFFSET}}
+\index{GetOFFSET@{GetOFFSET}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GetOFFSET()}{GetOFFSET()}}
+{\footnotesize\ttfamily uint8\+\_\+t Get\+OFFSET (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+\+: Usefull for Set\+Mode functions 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{231                                              \{}
+\DoxyCodeLine{232     uint8\_t index;}
+\DoxyCodeLine{233     index = port * 32 + pin;}
+\DoxyCodeLine{234     \textcolor{keywordflow}{return} ((offset[index]) / 4);}
+\DoxyCodeLine{235 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_ac97926dda461b416857036286500b391}\label{GPIO__FW_8h_ac97926dda461b416857036286500b391}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_ClearOUT@{GPIO\_ClearOUT}}
+\index{GPIO\_ClearOUT@{GPIO\_ClearOUT}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ClearOUT()}{GPIO\_ClearOUT()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Clear\+OUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+\+: Put GPIO\textquotesingle{}s out to 0 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                                               \{}
+\DoxyCodeLine{114     GPIO\_CLRP[port] |= (1 << pin);}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_ae00a7289f4ad9e94515e0b44df5dc9fd}\label{GPIO__FW_8h_ae00a7289f4ad9e94515e0b44df5dc9fd}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_Debounce@{GPIO\_Debounce}}
+\index{GPIO\_Debounce@{GPIO\_Debounce}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_Debounce()}{GPIO\_Debounce()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Debounce (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+\+: Firmware debounce for a GPIO 
+
+\+: Use in Sys\+Tick\+\_\+\+Handler or in some timer interrupt \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t state \+: ACT\+\_\+\+LOW,ACT\+\_\+\+HIGH \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                                                              \{}
+\DoxyCodeLine{170     \textcolor{keyword}{static} uint8\_t q = 0;   \textcolor{comment}{//Quantity of bounces}}
+\DoxyCodeLine{171     uint8\_t j = 0;          \textcolor{comment}{//It captures changes}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173     \textcolor{keywordflow}{if} (\mbox{\hyperlink{GPIO__FW_8c_a0e5d1c383b2083d451d7f69a9a90e140}{GPIO\_GetPIN}}(port, pin, state))   \textcolor{comment}{// The key is pushed?}}
+\DoxyCodeLine{174         j = 0x01;               \textcolor{comment}{//Something is happening, the key is been pushed}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     \textcolor{keywordflow}{if} (buff\_In \string^ j) \{          \textcolor{comment}{// If the key is pushed while q != BOUNCE}}
+\DoxyCodeLine{177         q++;                        \textcolor{comment}{// I change the buffer}}
+\DoxyCodeLine{178         \textcolor{keywordflow}{if} (q == \mbox{\hyperlink{GPIO__FW_8h_adbadc4286ab334302bdd54f1ef500e2e}{BOUNCE}}) \{}
+\DoxyCodeLine{179             q = 0;}
+\DoxyCodeLine{180             buff\_In \string^= 0x01;}
+\DoxyCodeLine{181         \}}
+\DoxyCodeLine{182     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{183         q = 0;}
+\DoxyCodeLine{184 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a2cabd7370b71570acf4287822e2362fa}\label{GPIO__FW_8h_a2cabd7370b71570acf4287822e2362fa}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_DebounceUserKEY@{GPIO\_DebounceUserKEY}}
+\index{GPIO\_DebounceUserKEY@{GPIO\_DebounceUserKEY}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_DebounceUserKEY()}{GPIO\_DebounceUserKEY()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Debounce\+User\+KEY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Firmware debounce for user key in board 
+
+\+: Use in Sys\+Tick\+\_\+\+Handler or in some timer interrupt \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                                 \{}
+\DoxyCodeLine{142     \textcolor{keyword}{static} uint8\_t q = 0;   \textcolor{comment}{//Quantity of bounces}}
+\DoxyCodeLine{143     uint8\_t j = 0;          \textcolor{comment}{//It captures changes}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{keywordflow}{if} (\mbox{\hyperlink{GPIO__FW_8c_a0e5d1c383b2083d451d7f69a9a90e140}{GPIO\_GetPIN}}(\mbox{\hyperlink{GPIO__FW_8h_af9e0a49aab9082b58d739c0aa5ca69ba}{UserKEY}}, ACT\_LOW))    \textcolor{comment}{// The key is pushed?}}
+\DoxyCodeLine{146         j = 0x01;               \textcolor{comment}{//Something is happening, the key is been pushed}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \textcolor{keywordflow}{if} (buff\_UserKEY \string^ j) \{         \textcolor{comment}{// If the key is pushed while q != BOUNCE}}
+\DoxyCodeLine{149         q++;                        \textcolor{comment}{// I change the buffer}}
+\DoxyCodeLine{150         \textcolor{keywordflow}{if} (q == \mbox{\hyperlink{GPIO__FW_8h_adbadc4286ab334302bdd54f1ef500e2e}{BOUNCE}}) \{}
+\DoxyCodeLine{151             q = 0;}
+\DoxyCodeLine{152             buff\_UserKEY \string^= 0x01;}
+\DoxyCodeLine{153         \}}
+\DoxyCodeLine{154     \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{155         q = 0;}
+\DoxyCodeLine{156 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a2701299a9e1bd1b4ec6b289c3c8d0c0f}\label{GPIO__FW_8h_a2701299a9e1bd1b4ec6b289c3c8d0c0f}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_Disable@{GPIO\_Disable}}
+\index{GPIO\_Disable@{GPIO\_Disable}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_Disable()}{GPIO\_Disable()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Disable GPIO0 and GPIO1 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                         \{}
+\DoxyCodeLine{33     SYSAHBCLKCTRL0\&= (\string~(1<<6));}
+\DoxyCodeLine{34     SYSAHBCLKCTRL0 \&= (\string~(1<<20));}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a57b8ff0901dfd7dd67ee8404cd34e5a6}\label{GPIO__FW_8h_a57b8ff0901dfd7dd67ee8404cd34e5a6}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_Enable@{GPIO\_Enable}}
+\index{GPIO\_Enable@{GPIO\_Enable}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_Enable()}{GPIO\_Enable()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Enable GPIO0 and GPIO1 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                        \{}
+\DoxyCodeLine{20     SYSAHBCLKCTRL0|= (1<<6);}
+\DoxyCodeLine{21     SYSAHBCLKCTRL0 |= (1<<20);}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_ab528a8f45e2f225c4be3dd8e59a29816}\label{GPIO__FW_8h_ab528a8f45e2f225c4be3dd8e59a29816}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_GetPIN@{GPIO\_GetPIN}}
+\index{GPIO\_GetPIN@{GPIO\_GetPIN}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_GetPIN()}{GPIO\_GetPIN()}}
+{\footnotesize\ttfamily uint8\+\_\+t GPIO\+\_\+\+Get\+PIN (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+\+: Return GPIO\textquotesingle{}s input state 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t STATE \+: ACT\+\_\+\+LOW,ACT\+\_\+\+HIGH \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: uint8\+\_\+t \+: 1 pin == \mbox{[}state\mbox{]} , 0 pin != \mbox{[}state\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                                                               \{}
+\DoxyCodeLine{82     port = port * 32 + pin;}
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} ( GPIO\_PBYTE[port] == state)}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{85     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{86         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{87 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a92fe0d25813af69105702ebf4c59df29}\label{GPIO__FW_8h_a92fe0d25813af69105702ebf4c59df29}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetDIR@{GPIO\_SetDIR}}
+\index{GPIO\_SetDIR@{GPIO\_SetDIR}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetDIR()}{GPIO\_SetDIR()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+DIR (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{dir }\end{DoxyParamCaption})}
+
+
+
+\+: Choose GPIO as Input/\+Output 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t dir \+: INPUT,OUTPUT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                          \{}
+\DoxyCodeLine{49     GPIO\_DIRP[port] \&= (\string~(1 << pin));}
+\DoxyCodeLine{50     GPIO\_DIRP[port] |= (dir << pin);}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a18b8e19a1f81ece1bd9f832828e6be58}\label{GPIO__FW_8h_a18b8e19a1f81ece1bd9f832828e6be58}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeCLKDIV@{GPIO\_SetModeCLKDIV}}
+\index{GPIO\_SetModeCLKDIV@{GPIO\_SetModeCLKDIV}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeCLKDIV()}{GPIO\_SetModeCLKDIV()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+CLKDIV (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Select peripheral clock divider for input filter sampling clock 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+: IOCONCLKDIV0 to IOCONCLKDIV6 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 338 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{338                                                                  \{}
+\DoxyCodeLine{339     uint8\_t offset;}
+\DoxyCodeLine{340     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{341     IOCON\_[offset] \&= (\string~(0x07 << 13));}
+\DoxyCodeLine{342     IOCON\_[offset] |= (mode << 13);}
+\DoxyCodeLine{343 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a88d6553ce86bf6f2dbfc422219f7df5b}\label{GPIO__FW_8h_a88d6553ce86bf6f2dbfc422219f7df5b}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeDAC@{GPIO\_SetModeDAC}}
+\index{GPIO\_SetModeDAC@{GPIO\_SetModeDAC}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeDAC()}{GPIO\_SetModeDAC()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+DAC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Selects DAC mode 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+: DAC\+\_\+\+EN,DAC\+\_\+\+DIS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 356 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{356                                                              \{}
+\DoxyCodeLine{357     uint8\_t offset;}
+\DoxyCodeLine{358     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{359     IOCON\_[offset] \&= (\string~(0x01 << 16));}
+\DoxyCodeLine{360     IOCON\_[offset] |= (mode << 16);}
+\DoxyCodeLine{361 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a3a8ce4635d8bac8e38a691aa6d3c65b4}\label{GPIO__FW_8h_a3a8ce4635d8bac8e38a691aa6d3c65b4}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeFILTER@{GPIO\_SetModeFILTER}}
+\index{GPIO\_SetModeFILTER@{GPIO\_SetModeFILTER}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeFILTER()}{GPIO\_SetModeFILTER()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+FILTER (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Digital filter sample mode 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+: BYPASS\+\_\+\+FILTER,CLK1\+\_\+\+FILTER,CLK2\+\_\+\+FILTER,CLK3\+\_\+\+FILTER \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{320                                                                  \{}
+\DoxyCodeLine{321     uint8\_t offset;}
+\DoxyCodeLine{322     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{323     IOCON\_[offset] \&= (\string~(0x03 << 11));}
+\DoxyCodeLine{324     IOCON\_[offset] |= (mode << 11);}
+\DoxyCodeLine{325 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a34bb2f4c73a61b7e975e6188bb319fff}\label{GPIO__FW_8h_a34bb2f4c73a61b7e975e6188bb319fff}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeHYS@{GPIO\_SetModeHYS}}
+\index{GPIO\_SetModeHYS@{GPIO\_SetModeHYS}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeHYS()}{GPIO\_SetModeHYS()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+HYS (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Hysteresis 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+:HYS\+\_\+\+EN,HYS\+\_\+\+DIS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 266 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{266                                                               \{}
+\DoxyCodeLine{267     uint8\_t offset;}
+\DoxyCodeLine{268     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{269     IOCON\_[offset] \&= (\string~(0x01 << 5));}
+\DoxyCodeLine{270     IOCON\_[offset] |= (mode << 5);}
+\DoxyCodeLine{271 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a91d160d2ff7912acd1b2eaa4f023236c}\label{GPIO__FW_8h_a91d160d2ff7912acd1b2eaa4f023236c}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeI2C@{GPIO\_SetModeI2C}}
+\index{GPIO\_SetModeI2C@{GPIO\_SetModeI2C}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeI2C()}{GPIO\_SetModeI2C()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+I2C (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Selects I2C mode 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+:STD\+\_\+\+MODE,STD\+\_\+\+GPIO,FAST\+\_\+\+MODE \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 374 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{374                                                              \{}
+\DoxyCodeLine{375     uint8\_t offset;}
+\DoxyCodeLine{376     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{377     IOCON\_[offset] \&= (\string~(0x03 << 8));}
+\DoxyCodeLine{378     IOCON\_[offset] |= (mode << 8);}
+\DoxyCodeLine{379 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a35bbae55852e2ebd176f51dee1a5cfb1}\label{GPIO__FW_8h_a35bbae55852e2ebd176f51dee1a5cfb1}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeINPUT@{GPIO\_SetModeINPUT}}
+\index{GPIO\_SetModeINPUT@{GPIO\_SetModeINPUT}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeINPUT()}{GPIO\_SetModeINPUT()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+INPUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: on-\/chip pull-\/up/pull-\/down resistor 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+:NO\+\_\+\+PULL\+\_\+\+UP\+\_\+\+DOWN,PULL\+\_\+\+DOWN,PULL\+\_\+\+UP,REPEATER \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 248 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{248                                                                 \{}
+\DoxyCodeLine{249     uint8\_t offset;}
+\DoxyCodeLine{250     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{251     IOCON\_[offset] \&= (\string~(0x03 << 3));}
+\DoxyCodeLine{252     IOCON\_[offset] |= (mode << 3);}
+\DoxyCodeLine{253 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_aea7f80da4bfc5bb2c380f7dd0759ab68}\label{GPIO__FW_8h_aea7f80da4bfc5bb2c380f7dd0759ab68}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeINV@{GPIO\_SetModeINV}}
+\index{GPIO\_SetModeINV@{GPIO\_SetModeINV}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeINV()}{GPIO\_SetModeINV()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+INV (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Invert input 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+: INV\+\_\+\+INPUT,NOT\+\_\+\+INV\+\_\+\+INPUT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 284 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284                                                               \{}
+\DoxyCodeLine{285     uint8\_t offset;}
+\DoxyCodeLine{286     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{287     IOCON\_[offset] \&= (\string~(0x01 << 6));}
+\DoxyCodeLine{288     IOCON\_[offset] |= (mode << 6);}
+\DoxyCodeLine{289 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_aa9d5f5c58a6f3e0b195a9546d3fa3479}\label{GPIO__FW_8h_aa9d5f5c58a6f3e0b195a9546d3fa3479}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetModeOD@{GPIO\_SetModeOD}}
+\index{GPIO\_SetModeOD@{GPIO\_SetModeOD}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetModeOD()}{GPIO\_SetModeOD()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+Mode\+OD (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+\+: Open drain 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port\+: PORT0,PORT1 \+: \mbox{[}in\mbox{]} uint8\+\_\+t pin\+: 0,31 \+: \mbox{[}in\mbox{]} uint8\+\_\+t mode\+: OD\+\_\+\+EN,OD\+\_\+\+DIS \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 302 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{302                                                              \{}
+\DoxyCodeLine{303     uint8\_t offset;}
+\DoxyCodeLine{304     offset = \mbox{\hyperlink{GPIO__FW_8c_ad32a7038a00deb5e8ae8757b9c7af49f}{GetOFFSET}}(port, pin);}
+\DoxyCodeLine{305     IOCON\_[offset] \&= (\string~(0x01 << 10));}
+\DoxyCodeLine{306     IOCON\_[offset] |= (mode << 10);}
+\DoxyCodeLine{307 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_ae12da89d8fb72eb570173e88dcf44289}\label{GPIO__FW_8h_ae12da89d8fb72eb570173e88dcf44289}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetOUT@{GPIO\_SetOUT}}
+\index{GPIO\_SetOUT@{GPIO\_SetOUT}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetOUT()}{GPIO\_SetOUT()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+OUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+\+: Put GPIO\textquotesingle{}s out to 1 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 99 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99                                             \{}
+\DoxyCodeLine{100     GPIO\_SETP[port] |= (1 << pin);}
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a3fbbb6ce9033d146683c313ca145b3f3}\label{GPIO__FW_8h_a3fbbb6ce9033d146683c313ca145b3f3}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_SetPIN@{GPIO\_SetPIN}}
+\index{GPIO\_SetPIN@{GPIO\_SetPIN}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_SetPIN()}{GPIO\_SetPIN()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Set\+PIN (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin,  }\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+
+
+\+: Choose GPIO\textquotesingle{}s output state 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t state \+: LOW,HIGH \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                            \{}
+\DoxyCodeLine{65     port = port * 32 + pin;}
+\DoxyCodeLine{66     GPIO\_PBYTE[port] \&= (\string~1);}
+\DoxyCodeLine{67     GPIO\_PBYTE[port] |= state;}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_ade8d47cfeac9b1484e0d2e601f2b82c8}\label{GPIO__FW_8h_ade8d47cfeac9b1484e0d2e601f2b82c8}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!GPIO\_ToogleOUT@{GPIO\_ToogleOUT}}
+\index{GPIO\_ToogleOUT@{GPIO\_ToogleOUT}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_ToogleOUT()}{GPIO\_ToogleOUT()}}
+{\footnotesize\ttfamily void GPIO\+\_\+\+Toogle\+OUT (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port,  }\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+\+: Invert GPIO\textquotesingle{}s out 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t port \+: PORT0,PORT1 \\
+\hline
+{\em } & \mbox{[}in\mbox{]} uint8\+\_\+t pin \+: 0,31 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127                                                \{}
+\DoxyCodeLine{128     GPIO\_NOTP[port] |= (1 << pin);}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a22d5bf787f7803f0a49b2458d9ec6a69}\label{GPIO__FW_8h_a22d5bf787f7803f0a49b2458d9ec6a69}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!IOCONDisable@{IOCONDisable}}
+\index{IOCONDisable@{IOCONDisable}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{IOCONDisable()}{IOCONDisable()}}
+{\footnotesize\ttfamily void IOCONDisable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Disable IOCON 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{208                         \{}
+\DoxyCodeLine{209     SYSAHBCLKCTRL0\&= (\string~(1<<18));}
+\DoxyCodeLine{210 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__FW_8h_a976cfc82607589bc84880c2a45f4eab4}\label{GPIO__FW_8h_a976cfc82607589bc84880c2a45f4eab4}} 
+\index{GPIO\_FW.h@{GPIO\_FW.h}!IOCONEnable@{IOCONEnable}}
+\index{IOCONEnable@{IOCONEnable}!GPIO\_FW.h@{GPIO\_FW.h}}
+\doxysubsubsection{\texorpdfstring{IOCONEnable()}{IOCONEnable()}}
+{\footnotesize\ttfamily void IOCONEnable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Enable IOCON 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file GPIO\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{195                        \{}
+\DoxyCodeLine{196     SYSAHBCLKCTRL0|= (1<<18);}
+\DoxyCodeLine{197 \}}
+
+\end{DoxyCode}

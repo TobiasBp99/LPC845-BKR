@@ -1,0 +1,129 @@
+\hypertarget{06-DAC_8c}{}\doxysection{source/06-\/\+DAC.c File Reference}
+\label{06-DAC_8c}\index{source/06-\/DAC.c@{source/06-\/DAC.c}}
+
+
+\+: Firmware functions ADC  
+
+
+{\ttfamily \#include \char`\"{}Aplication.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{06-DAC_8c_a1965eaca47dbf3f87acdafc2208f04eb}\label{06-DAC_8c_a1965eaca47dbf3f87acdafc2208f04eb}} 
+\#define {\bfseries UP}~0
+\item 
+\mbox{\Hypertarget{06-DAC_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}\label{06-DAC_8c_a4193cd1c8c2e6ebd0e056fa2364a663f}} 
+\#define {\bfseries DOWN}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{06-DAC_8c_a760c2293c3b5faecf5158f21d436de68}{main}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Main Function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{06-DAC_8c_a260e06ce96c2e4deebccaedeb059dc0b}{tick}} = \mbox{\hyperlink{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}{TICK\+\_\+\+OUT\+\_\+1S}}/8
+\begin{DoxyCompactList}\small\item\em Var for Sys\+Tick\+\_\+\+Handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{06-DAC_8c_a0a771ba01e69b26286484ddbe12988dc}\label{06-DAC_8c_a0a771ba01e69b26286484ddbe12988dc}} 
+uint32\+\_\+t \mbox{\hyperlink{06-DAC_8c_a0a771ba01e69b26286484ddbe12988dc}{conv}} = 0
+\begin{DoxyCompactList}\small\item\em Var for ADC (not used) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{06-DAC_8c_a105d115223bfae1cdd71ea4f772f937b}\label{06-DAC_8c_a105d115223bfae1cdd71ea4f772f937b}} 
+uint16\+\_\+t \mbox{\hyperlink{06-DAC_8c_a105d115223bfae1cdd71ea4f772f937b}{buff\+Dac0}} = 0
+\begin{DoxyCompactList}\small\item\em Buffer for dac. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{06-DAC_8c_a229945e9fea65b755e020eec53b61159}\label{06-DAC_8c_a229945e9fea65b755e020eec53b61159}} 
+uint16\+\_\+t \mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dac\+Val}} = 0
+\begin{DoxyCompactList}\small\item\em Current value to be edited. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Firmware functions ADC 
+
+\+: 12 bits convertion \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 12/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{06-DAC_8c_a760c2293c3b5faecf5158f21d436de68}\label{06-DAC_8c_a760c2293c3b5faecf5158f21d436de68}} 
+\index{06-\/DAC.c@{06-\/DAC.c}!main@{main}}
+\index{main@{main}!06-\/DAC.c@{06-\/DAC.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \+:int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Main Function 
+
+\+: initialize the system and stay in the while \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 12/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: int 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file 06-\/\+DAC.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     uint8\_t wave = UP;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \mbox{\hyperlink{Aplication_8c_a4b28ec9e17971277dbb88dff57e9c7f9}{LPC\_Init}}();}
+\DoxyCodeLine{34     DAC0\_Init(\mbox{\hyperlink{DAC__FW_8h_a5fd4f0b768f2f570b3de2f7c88f2fe74}{DACOUT0}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordflow}{while}(1) \{}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if}( \mbox{\hyperlink{06-DAC_8c_a260e06ce96c2e4deebccaedeb059dc0b}{tick}} == 0)\{}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40             \mbox{\hyperlink{06-DAC_8c_a260e06ce96c2e4deebccaedeb059dc0b}{tick}} = \mbox{\hyperlink{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}{TICK\_OUT\_1S}}/4;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42             \textcolor{keywordflow}{if}(\mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dacVal}} == 0)}
+\DoxyCodeLine{43                 wave = UP;}
+\DoxyCodeLine{44             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dacVal}} == 0x3FF)}
+\DoxyCodeLine{45                 wave = DOWN;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47             \textcolor{keywordflow}{if}(wave == UP)}
+\DoxyCodeLine{48                 \mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dacVal}}++;}
+\DoxyCodeLine{49             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( wave == DOWN)}
+\DoxyCodeLine{50                 \mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dacVal}}-\/-\/;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52             \mbox{\hyperlink{DAC__SW_8c_a39844f140cfea0dafb6ea96b634b366c}{SetDAC0}}(\mbox{\hyperlink{06-DAC_8c_a229945e9fea65b755e020eec53b61159}{dacVal}});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} 0 ;}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{06-DAC_8c_a260e06ce96c2e4deebccaedeb059dc0b}\label{06-DAC_8c_a260e06ce96c2e4deebccaedeb059dc0b}} 
+\index{06-\/DAC.c@{06-\/DAC.c}!tick@{tick}}
+\index{tick@{tick}!06-\/DAC.c@{06-\/DAC.c}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily uint32\+\_\+t tick = \mbox{\hyperlink{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}{TICK\+\_\+\+OUT\+\_\+1S}}/8}
+
+
+
+Var for Sys\+Tick\+\_\+\+Handler. 
+
+Declared in main. 
+
+Definition at line 20 of file 06-\/\+DAC.\+c.
+

@@ -1,0 +1,173 @@
+\hypertarget{SysTick__FW_8h}{}\doxysection{inc/\+Sys\+Tick\+\_\+\+FW.h File Reference}
+\label{SysTick__FW_8h}\index{inc/SysTick\_FW.h@{inc/SysTick\_FW.h}}
+
+
+\+: Firmware functions for Sys\+Tick  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}\label{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}} 
+\#define \mbox{\hyperlink{SysTick__FW_8h_a2f9bf66becc3062dcc10dfba537ec503}{TICK\+\_\+\+OUT\+\_\+1S}}~100
+\begin{DoxyCompactList}\small\item\em Systick interrupt each 1 second. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a333e485c593bf1d95f409c0ebd4c364b}\label{SysTick__FW_8h_a333e485c593bf1d95f409c0ebd4c364b}} 
+\#define {\bfseries Sys\+Tick\+\_\+}~( ( \+\_\+\+\_\+\+RW uint32\+\_\+t $\ast$)  0x\+E000\+E000\+UL)
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_ab26b3fc75982181f81b185b206e897f6}\label{SysTick__FW_8h_ab26b3fc75982181f81b185b206e897f6}} 
+\#define {\bfseries SYST\+\_\+\+CSR}~Sys\+Tick\+\_\+\mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a4e8efcc1f2b551dbf3cb0aae1231e380}\label{SysTick__FW_8h_a4e8efcc1f2b551dbf3cb0aae1231e380}} 
+\#define {\bfseries SYST\+\_\+\+RVR}~Sys\+Tick\+\_\+\mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_ae3dc4d2dbfdf38c593a5581415fecfed}\label{SysTick__FW_8h_ae3dc4d2dbfdf38c593a5581415fecfed}} 
+\#define {\bfseries SYST\+\_\+\+CVR}~Sys\+Tick\+\_\+\mbox{[}6\mbox{]}
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a2d37582dd39f59744e340cce09230250}\label{SysTick__FW_8h_a2d37582dd39f59744e340cce09230250}} 
+\#define {\bfseries SYST\+\_\+\+CALIB}~Sys\+Tick\+\_\+\mbox{[}7\mbox{]}
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a2ab9a02dc6d18f40294ef07253c8d95c}\label{SysTick__FW_8h_a2ab9a02dc6d18f40294ef07253c8d95c}} 
+\#define {\bfseries SYSTICK\+\_\+\+ENABLE\+\_\+\+INTERRUPT\+\_\+\+CLK}~0x07
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a62f69a8cb8b23f80936e6370b7da9328}\label{SysTick__FW_8h_a62f69a8cb8b23f80936e6370b7da9328}} 
+\#define {\bfseries SYSTICK\+\_\+\+DISABLE}~0x00
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a52ccbe1220a5a103b5c4ab6591e89ea5}\label{SysTick__FW_8h_a52ccbe1220a5a103b5c4ab6591e89ea5}} 
+\#define {\bfseries SYSTICK\+\_\+\+INT\+\_\+\+DIS}~SYST\+\_\+\+CSR \&= $\sim$0x02;
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a5a1d12a30ac8d03958847b99fd55491e}\label{SysTick__FW_8h_a5a1d12a30ac8d03958847b99fd55491e}} 
+\#define {\bfseries SYSTICK\+\_\+\+INT\+\_\+\+EN}~SYST\+\_\+\+CSR = SYSTICK\+\_\+\+ENABLE\+\_\+\+INTERRUPT\+\_\+\+CLK;
+\item 
+\mbox{\Hypertarget{SysTick__FW_8h_a707c29c5086c279ada412a9f6f32a17d}\label{SysTick__FW_8h_a707c29c5086c279ada412a9f6f32a17d}} 
+\#define {\bfseries FRE30\+MHz}~30000U
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SysTick__FW_8h_aeb71ef4b996788e4aa8cda6ef617f58f}{Sys\+Tick\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Initialize the systick \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{SysTick__FW_8h_a4ceed9cc29c30c29ab1114ee07f22b81}{Sys\+Tick\+\_\+\+Off}} (void)
+\begin{DoxyCompactList}\small\item\em \+: Stops the systick \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{SysTick__FW_8h_a8625fdc02578951cfe5b948828d60ac6}{Sys\+Tick\+\_\+\+Set}} (uint32\+\_\+t freq)
+\begin{DoxyCompactList}\small\item\em \+: Set the counter as freq$\ast$10mS -\/1 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Firmware functions for Sys\+Tick 
+
+\+: Used for 30 MHz \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SysTick__FW_8h_aeb71ef4b996788e4aa8cda6ef617f58f}\label{SysTick__FW_8h_aeb71ef4b996788e4aa8cda6ef617f58f}} 
+\index{SysTick\_FW.h@{SysTick\_FW.h}!SysTick\_Init@{SysTick\_Init}}
+\index{SysTick\_Init@{SysTick\_Init}!SysTick\_FW.h@{SysTick\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Init()}{SysTick\_Init()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Initialize the systick 
+
+\+: Enable Sys\+Tick, enable interrupt and set the counter \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file Sys\+Tick\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                        \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{SysTick__FW_8c_a946cda51a0cd98f544fb51618408c02c}{SysTick\_Set}}(FRE30MHz);}
+\DoxyCodeLine{21     SYST\_CSR = SYSTICK\_ENABLE\_INTERRUPT\_CLK;}
+\DoxyCodeLine{22     SYST\_CVR = 0;}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SysTick__FW_8h_a4ceed9cc29c30c29ab1114ee07f22b81}\label{SysTick__FW_8h_a4ceed9cc29c30c29ab1114ee07f22b81}} 
+\index{SysTick\_FW.h@{SysTick\_FW.h}!SysTick\_Off@{SysTick\_Off}}
+\index{SysTick\_Off@{SysTick\_Off}!SysTick\_FW.h@{SysTick\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Off()}{SysTick\_Off()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: Stops the systick 
+
+\+: disable Sys\+Tick, disable interrupt \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Sys\+Tick\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                       \{}
+\DoxyCodeLine{35     SYST\_CSR = SYSTICK\_DISABLE;}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{SysTick__FW_8h_a8625fdc02578951cfe5b948828d60ac6}\label{SysTick__FW_8h_a8625fdc02578951cfe5b948828d60ac6}} 
+\index{SysTick\_FW.h@{SysTick\_FW.h}!SysTick\_Set@{SysTick\_Set}}
+\index{SysTick\_Set@{SysTick\_Set}!SysTick\_FW.h@{SysTick\_FW.h}}
+\doxysubsubsection{\texorpdfstring{SysTick\_Set()}{SysTick\_Set()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Set (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{freq }\end{DoxyParamCaption})}
+
+
+
+\+: Set the counter as freq$\ast$10mS -\/1 
+
+\+: Always use at 30MHz \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint32\+\_\+t freq\+: FRE30\+MHz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Sys\+Tick\+\_\+\+FW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                \{}
+\DoxyCodeLine{48     SYST\_RVR = freq*10 -\/ 1; \textcolor{comment}{// 30MHz*10mS-\/1}}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}

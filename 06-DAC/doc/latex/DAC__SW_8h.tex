@@ -1,0 +1,61 @@
+\hypertarget{DAC__SW_8h}{}\doxysection{inc/\+DAC\+\_\+\+SW.h File Reference}
+\label{DAC__SW_8h}\index{inc/DAC\_SW.h@{inc/DAC\_SW.h}}
+
+
+\+: Software functions for DAC 10 bits  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{DAC__SW_8h_a15803b41ba2821531a81777189a428bb}{Set\+DAC0}} (uint16\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em \+: Select the voltage output \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Software functions for DAC 10 bits 
+
+\+: \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 12/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DAC__SW_8h_a15803b41ba2821531a81777189a428bb}\label{DAC__SW_8h_a15803b41ba2821531a81777189a428bb}} 
+\index{DAC\_SW.h@{DAC\_SW.h}!SetDAC0@{SetDAC0}}
+\index{SetDAC0@{SetDAC0}!DAC\_SW.h@{DAC\_SW.h}}
+\doxysubsubsection{\texorpdfstring{SetDAC0()}{SetDAC0()}}
+{\footnotesize\ttfamily void Set\+DAC0 (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+\+: Select the voltage output 
+
+\+: Vout = (3.\+3V $\ast$ val)/1024 \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 12/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} uint16\+\_\+t val\+: 10 bits \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: void 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file DAC\+\_\+\+SW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                           \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{DAC__SW_8c_a105d115223bfae1cdd71ea4f772f937b}{buffDac0}} = (val \& 0x3FF);   \textcolor{comment}{// To be sure buffDac0 is 10 bits}}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}

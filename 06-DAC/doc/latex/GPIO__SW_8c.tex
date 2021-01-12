@@ -1,0 +1,132 @@
+\hypertarget{GPIO__SW_8c}{}\doxysection{source/\+GPIO\+\_\+\+SW.c File Reference}
+\label{GPIO__SW_8c}\index{source/GPIO\_SW.c@{source/GPIO\_SW.c}}
+
+
+\+: Software functions for GPIO  
+
+
+{\ttfamily \#include \char`\"{}Aplication.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{GPIO__SW_8c_ae7a7d3f28633b13ca41e0eefed21183e}{Get\+User\+KEY}} (void)
+\begin{DoxyCompactList}\small\item\em \+: State of the user key in board \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{GPIO__SW_8c_a177cbd59f59698eb86d3fa4fe59faf01}{Get\+Input}} (void)
+\begin{DoxyCompactList}\small\item\em \+: State of the input \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{GPIO__SW_8c_adddac3e807624e09d57cc36c1a94c224}\label{GPIO__SW_8c_adddac3e807624e09d57cc36c1a94c224}} 
+uint8\+\_\+t {\bfseries buff\+\_\+\+User\+KEY}
+\item 
+\mbox{\Hypertarget{GPIO__SW_8c_a5aba67c09e7f285659c4642255a6111a}\label{GPIO__SW_8c_a5aba67c09e7f285659c4642255a6111a}} 
+uint8\+\_\+t {\bfseries buff\+\_\+\+In}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Software functions for GPIO 
+
+\+: These functions avoid bouncing. Both must be used w/ GPIO\+\_\+\+Debounce\+User\+KEY or GPIO\+\_\+\+Debounce \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GPIO__SW_8c_a177cbd59f59698eb86d3fa4fe59faf01}\label{GPIO__SW_8c_a177cbd59f59698eb86d3fa4fe59faf01}} 
+\index{GPIO\_SW.c@{GPIO\_SW.c}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!GPIO\_SW.c@{GPIO\_SW.c}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \+:uint8\+\_\+t Get\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: State of the input 
+
+\+: Is necessary using GPIO\+\_\+\+Debounce \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: uint8\+\_\+t 1 if input pressed, 0 if input pressed 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file GPIO\+\_\+\+SW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                       \{}
+\DoxyCodeLine{49     \textcolor{keyword}{static} uint8\_t buff\_before = 0x00;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} ( buff\_In == 0x01 \&\& buff\_before == 0x00 )\{}
+\DoxyCodeLine{52         buff\_before = 0x01;}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} (1);}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( buff\_In == 0x01 \&\& buff\_before == 0x01 )}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{57     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( buff\_In == 0x00 \&\& buff\_before == 0x01 )}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{59     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GPIO__SW_8c_ae7a7d3f28633b13ca41e0eefed21183e}\label{GPIO__SW_8c_ae7a7d3f28633b13ca41e0eefed21183e}} 
+\index{GPIO\_SW.c@{GPIO\_SW.c}!GetUserKEY@{GetUserKEY}}
+\index{GetUserKEY@{GetUserKEY}!GPIO\_SW.c@{GPIO\_SW.c}}
+\doxysubsubsection{\texorpdfstring{GetUserKEY()}{GetUserKEY()}}
+{\footnotesize\ttfamily \+:uint8\+\_\+t Get\+User\+KEY (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\+: State of the user key in board 
+
+\+: Is necessary using GPIO\+\_\+\+Debounce\+User\+KEY \begin{DoxyAuthor}{Author}
+\+: Tobias Bavasso Piizzi 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 04/01/2021 
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em } & \mbox{[}in\mbox{]} void \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: uint8\+\_\+t 1 if user key pressed, 0 if user key not 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file GPIO\+\_\+\+SW.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                         \{}
+\DoxyCodeLine{22     \textcolor{keyword}{static} uint8\_t buff\_before = 0x00;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordflow}{if} ( buff\_UserKEY == 0x01 \&\& buff\_before == 0x00 )\{}
+\DoxyCodeLine{25         buff\_before = 0x01;}
+\DoxyCodeLine{26         \textcolor{keywordflow}{return} (1);}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( buff\_UserKEY == 0x01 \&\& buff\_before == 0x01 )}
+\DoxyCodeLine{29         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{30     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( buff\_UserKEY == 0x00 \&\& buff\_before == 0x01 )\{}
+\DoxyCodeLine{31         buff\_before = 0x00;}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} (0);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}

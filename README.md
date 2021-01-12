@@ -13,7 +13,7 @@ _The main goal is provide some basic examples with LPC845-BRK devolopment board.
 
 ## Structure
 Every project has a **source** and **inc** directory, **source** contains only files **.c** whilw **inc** contains only files **.h**.
-Both type of files are divided between _<Module_Name__**FW**.c>_ or _<Module_Name__**FW**.h>_ That's beacause of the abstraction layers.
+Both type of files are divided between _<Module_Name__**FW**.c>_ or _<Module_Name__**SW**.h>_ That's beacause of the abstraction layers.
 ### Layers
 To get an exportable code for any other embebbed is usefull working with abstraction layers.
 ![alt text](https://github.com/TobiasBp99/LPC845-BRK/blob/master/00-ImportantDocumentation/Layers.jpg)

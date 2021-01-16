@@ -37,7 +37,7 @@ int main(void) {
     while(1) {
     	if( tick == 0){
 
-    		tick = TICK_OUT_1S/4;
+    		tick = TICK_OUT_1S/8;
 
     		if(dacVal == 0)
     			wave = UP;

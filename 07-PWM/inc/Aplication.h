@@ -21,6 +21,7 @@
 #include "ADC_FW.h"
 #include "DAC_FW.h"
 #include "DAC_SW.h"
+#include "PWM_FW.h"
 
 void LPC_Init(void);
 void GPIO_Init(void);

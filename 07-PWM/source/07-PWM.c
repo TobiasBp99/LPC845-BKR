@@ -16,10 +16,12 @@
  * \param 	: [in] void
  * \return 	: int
  * */
-#include "Aplication.h"
+uint32_t tick = 0;	//!< Var for systick
+uint32_t conv = 0;	//!< Var for ADC
 int main(void) {
-
+	LPC_Init();
     while(1) {
+
 
     }
     return 0 ;

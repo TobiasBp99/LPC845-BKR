@@ -59,7 +59,7 @@ void SysTick_Set(uint32_t freq){
  * */
 extern uint32_t tick;	//!< Declared in main
 void SysTick_Handler(void){
-	DAC0_SetValue();
+
     if (tick >= 0U)
     	tick--;
 

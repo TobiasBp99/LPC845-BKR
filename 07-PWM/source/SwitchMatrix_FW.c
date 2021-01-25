@@ -21,7 +21,8 @@
  * */
 void SWM(uint8_t port, uint8_t pin, uint8_t assign, uint8_t byte) {
 	pin = pin + 0x20 * port; //PIO0[0:31] 0x00 to 0x1F PIO1[0:21] 0x1F to 0x35
-	PINASSIGN[assign] |= (pin << byte);
+	PINASSIGN[assign] &= (~(0xff << (byte*8)));
+	PINASSIGN[assign] |= (pin << (byte*8));
 }
 
 /**

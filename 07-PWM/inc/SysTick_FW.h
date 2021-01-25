@@ -9,7 +9,7 @@
 #ifndef SYSTICK_FW_H_
 #define SYSTICK_FW_H_
 
-#define TICK_OUT_1S 100		//!< Systick interrupt each 1 second
+#define TICK_OUT_1S 100-1		//!< Systick interrupt each 1 second
 
 #define SysTick_	( ( __RW uint32_t *) 	0xE000E000UL)
 

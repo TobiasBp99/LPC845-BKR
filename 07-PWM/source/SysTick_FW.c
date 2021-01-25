@@ -58,10 +58,12 @@ void SysTick_Set(uint32_t freq){
  * \return 	: void
  * */
 extern uint32_t tick;	//!< Declared in main
+extern uint8_t  duty;	//!< Declared in main
 void SysTick_Handler(void){
 
-    if (tick >= 0U)
+    if (tick > 0U){
     	tick--;
+    }
 
 
 
